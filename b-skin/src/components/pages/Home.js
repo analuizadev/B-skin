@@ -1,15 +1,12 @@
-import styles from './Home.module.css'
+import styles from './Home.module.css';
+
+import Carousel from '../services/Carousel';
 
 function Home(){
 
     return(
         <div className={styles.home_container}>
-            <p>home</p>
-            <p>home</p>
-            <p>home</p>
-            <p>home</p>
-            <p>home</p>
-            <p>home</p>
+            <Carousel />
 
             <p>home</p>
             <p>home</p>
