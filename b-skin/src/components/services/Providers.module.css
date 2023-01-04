@@ -1,0 +1,46 @@
+.body *{
+    margin: 0;
+    padding: 0;
+}
+
+.body body{
+    height: 100%;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+}
+
+.table{
+    width: 70%;
+    margin: 0 auto;  
+    margin-top: 2em;
+}
+
+.table h1{
+    text-align: center;
+    padding-bottom: 1em;
+    color: #0e4e96;
+}
+
+.table_container{
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table_container thead{
+    font-size: 18px;
+    text-align: left;
+    color: white;
+}
+
+.table_container thead th{
+    padding-bottom: 5px;
+    background-color: #0e4e96;
+    padding: 10px;
+}

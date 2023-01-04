@@ -5,6 +5,7 @@
     margin: 0 auto;
     flex-wrap: wrap;
     position: relative;
+    padding-bottom: 100px;
 }
 
 .min_height{

@@ -1,40 +1,42 @@
 import styles from './Footer.module.css';
-import Order from '../services/Order';
-import Investors from '../services/Investors';
 
-import {BsGithub} from 'react-icons/bs';
+import Master from '../img/mastercard.png';
+import Visa from '../img/visto.png';
+import Pix from '../img/pix.png';
+
+import {Link} from 'react-router-dom';
+import {BiCopyright} from 'react-icons/bi'
 
 function Footer(){
 
+    const git= "https://github.com/analuizadev";
+    const git2= "https://github.com/CarlosE-Dev";
+
     return(
         <footer className={styles.footer}>
-            <ul>
-                <div>
+            <ul className={styles.rodape}>
+                <div className={styles.help}>
                     <h2>Get Help</h2>
-                    <li>
-                        contato
-                    </li>
-                    <li>
-                        pedidos
-                        <Order />
-                    </li>
-                    <li>
-                        fornecedores
-                        <Investors />
-                    </li>
+                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/order">Order</Link></li>
+                    <li><Link to="/providers">Providers</Link></li>
                 </div>
-                <div>
+                <div className={styles.payment}>
                     <h2>Payment</h2>
                     <li>
-                        <p>cartao</p>
+                        <img src={Master} />
                     </li>
-                </div>
-                <div className={styles.social}>
-                    <h2>Social</h2>
                     <li>
-                        <BsGithub />
+                        <img src={Visa} />
+                    </li>
+                    <li>
+                        <img src={Pix} />
                     </li>
                 </div>
+            </ul>
+
+            <ul className={styles.direitos}>
+                <p><span><BiCopyright /></span>2023 B-skin. Todos os direitos reservados.</p>
             </ul>
             
         </footer>

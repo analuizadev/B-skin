@@ -7,7 +7,7 @@ import News from './components/pages/News';
 import Shirt from './components/pages/Shirt';
 import ShopPage from './components/pages/ShopPage';
 
-import Investors from './components/services/Investors';
+import Providers from './components/services/Providers';
 import Order from './components/services/Order';
 
 import NavBar from './components/layout/NavBar';
@@ -24,7 +24,7 @@ function App() {
           <Route path="/news" element={<News />}></Route>
           <Route path="/shirt" element={<Shirt />}></Route>
           <Route path="/shoppage" element={<ShopPage />}></Route>
-          <Route path="/investors" element={<Investors />}></Route>
+          <Route path="/providers" element={<Providers />}></Route>
           <Route path="/order" element={<Order />}></Route>
         </Routes>
       </Container>
