@@ -1,10 +1,17 @@
 import styles from './Providers.module.css';
 
-import Table from '../table/Table';
+import EditModal from '../others/EditModal';
+import Table from '../others/Table';
 
 function Providers() {
   return (
-    <Table />
+    <>
+    
+      <Table />
+      
+      <EditModal />
+      
+    </>
   )
 }
 
