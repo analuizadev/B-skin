@@ -1,7 +1,8 @@
 import styles from './Providers.module.css';
 
-import {RxPencil1} from 'react-icons/rx'
-import {TiDeleteOutline} from 'react-icons/ti'
+import {RxPencil1} from 'react-icons/rx';
+import {TiDeleteOutline} from 'react-icons/ti';
+import {BsCircleFill} from 'react-icons/bs';
 
 function Providers() {
   return (
@@ -27,13 +28,13 @@ function Providers() {
                         <tr>
                             <td>Nike</td>
                             <td>11/02/2021</td>
-                            <td>on</td>
+                            <td className={styles.on}><BsCircleFill /></td>
                             <td><button><RxPencil1 /></button> <span><button><TiDeleteOutline /></button></span></td>
                         </tr>
                         <tr>
                             <td>Amazon</td>
                             <td>11/02/2021</td>
-                            <td>on</td>
+                            <td className={styles.off}><BsCircleFill /></td>
                             <td>botões</td>
                         </tr>
                         <tr>

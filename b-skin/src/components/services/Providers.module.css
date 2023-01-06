@@ -12,6 +12,7 @@
     margin: 0 auto;
     width: 50%;
     margin-top: 2em;
+    box-shadow: 0 0 40px 0 rgb(0 0 0 / 15%);
 }
 
 .table caption{
@@ -97,3 +98,28 @@
     background-color: #0e4e96;
     border-radius: 20px;
 }
+
+.on svg{
+    color: green;
+    animation: active 0.5s linear infinite forwards;
+}
+
+@keyframes active {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+
+.off svg{
+    color: rgb(199, 18, 18);
+}
+  
