@@ -1,46 +1,99 @@
-.body *{
-    margin: 0;
-    padding: 0;
-}
-
-.body body{
+.table{
+    width: 100%;
     height: 100%;
 }
 
-.body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 350px;
+.radius{
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
 }
 
-.table{
-    width: 70%;
-    margin: 0 auto;  
+.table table{
+    margin: 0 auto;
+    width: 50%;
     margin-top: 2em;
 }
 
-.table h1{
-    text-align: center;
-    padding-bottom: 1em;
+.table caption{
+    margin-bottom: 1em;
+    font-size: 30px;
     color: #0e4e96;
+    font-weight: bold;
 }
 
-.table_container{
-    width: 60%;
-    margin: 0 auto;
+.table thead{
+    width: 100%;
+    background-color: #0e4e96;
+}
+
+.table thead, tbody{
+    display: block;
+    text-align: center;
+}
+
+.table tbody{
+    overflow-y: scroll;
+    height: 300px;
     border-collapse: collapse;
 }
 
-.table_container thead{
-    font-size: 18px;
-    text-align: left;
-    color: white;
+
+.table td{
+    width: 10%;
+    border-bottom: 1px solid #0e4d9671;
+    line-height: 2em;
 }
 
-.table_container thead th{
-    padding-bottom: 5px;
-    background-color: #0e4e96;
+.scroll tr{
+    font-size: 17px;
+}
+
+.scroll tr:hover{
+    background-color: #96c1f357;
+}
+
+.scroll svg{
+    font-size: 19px;
+    color: #0e4e96;
+}
+
+.scroll button{
+    margin-top: 3px;
+    padding: 6px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.scroll button:hover{
+    border-radius: 20px;
+    background-color: #a0a0a055;
+}
+
+.scroll span{
     padding: 10px;
+}
+
+.table th{
+    width: 7%;
+    color: white;
+    font-size: 17px;
+    line-height: 2em;
+}
+
+.interactive{
+    width: calc(100% - 15px);
+}
+
+.table tbody::-webkit-scrollbar{
+    width: 10px;
+    background-color: #f4f4f4;
+}
+
+.table tbody::-webkit-scrollbar-thumb{
+    background-color: #0e4e96;
+    border-radius: 20px;
 }
