@@ -99,26 +99,72 @@
     border-radius: 20px;
 }
 
-.on svg{
-    color: green;
-    animation: active 0.5s linear infinite forwards;
+.on,
+.off{
+    position: relative;
 }
 
-@keyframes active {
-    0% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
+.on:before{
+    top: 35%;
+    width: 13px;
+    left: 45%;
+    height: 13px;
+    background: #54c63aab;
+    border-radius: 9px;
+    position: absolute;
+    content: "";
+    margin: 0 auto;
+    animation: on-pulse 2s linear infinite;
+}
+
+.on:after{
+    width: 13px;
+    height: 13px;
+    background: #54c63a;
+    border-radius: 9px;
+    position: absolute;
+    left: 45%;
+    top: 35%;
+    content: "";
+    margin: 0 auto;
+}
+
+@keyframes on-pulse{
+    0%{
+        transform: scale(1.0);
     }
-    50% {
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1);
+
+    50%{
+        transform: scale(1.5);
     }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
+
+    100%{
+        transform: scale(2);
+        background-color: transparent;
     }
 }
 
-.off svg{
-    color: rgb(199, 18, 18);
+.off:before{
+    top: 35%;
+    width: 13px;
+    left: 45%;
+    height: 13px;
+    background: rgba(199, 18, 18, 0.704);
+    border-radius: 9px;
+    position: absolute;
+    content: "";
+    margin: 0 auto;
+    animation: on-pulse 2s linear infinite;
+}
+
+.off:after{
+    width: 13px;
+    height: 13px;
+    background: rgb(199, 18, 18);
+    border-radius: 9px;
+    position: absolute;
+    left: 45%;
+    top: 35%;
+    content: "";
+    margin: 0 auto;
 }

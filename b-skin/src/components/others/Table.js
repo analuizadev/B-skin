@@ -32,13 +32,13 @@ function Table(){
                             <tr>
                                 <td>Nike</td>
                                 <td>11/02/2021</td>
-                                <td className={styles.on}><BsCircleFill /></td>
+                                <td className={styles.on}></td>
                                 <td><button><RxPencil1 /></button> <span><button><TiDeleteOutline /></button></span></td>
                             </tr>
                             <tr>
                                 <td>Amazon</td>
                                 <td>11/02/2021</td>
-                                <td className={styles.off}><BsCircleFill /></td>
+                                <td className={styles.off}></td>
                                 <td>botões</td>
                             </tr>
                             <tr>
