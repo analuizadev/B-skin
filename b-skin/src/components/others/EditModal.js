@@ -11,19 +11,24 @@ function EditModal(){
           </header>
 
           <form className={styles.modal_form}>
-            <input id="name" type="text" className={styles.modal_field} />
-            <textarea id="description" type="text" className={styles.modal_field} />
-            <input id="document" type="text" className={styles.modal_field} />
+            <input id="name" type="text" placeholder="NAME" className={styles.modal_field} />
+            <input id="email" type="text" placeholder="EMAIL" className={styles.modal_field} />
+            <input id="document" type="text" placeholder="DOCUMENT" className={styles.modal_field} />
+            <input id="phone" type="text" placeholder="PHONE" className={styles.modal_field} />
+            <textarea id="description" type="text" placeholder="DESCRIPTION" className={styles.modal_field} />
             
-            <div>
-              <label for="on" className={styles.container}>on
-                <input id="on" name="active" type="radio" value="on" className={styles.modal_active} />
+            <div className={styles.div_active}>
+              <label className={styles.active_form}>on
+                <input type="radio" name="active" id="on" value="on-active"
+                className={styles.modal_active}></input>
                 <span className={styles.checkmark}></span>
               </label>
-              <label for="off" className={styles.container}>off
-                <input id="off" name="active" type="radio" value="off" className={styles.modal_active} />
+
+              <label className={styles.active_form}>off
+                <input type="radio" name="active" id="off" value="off-active"
+                className={styles.modal_active}></input>
                 <span className={styles.checkmark}></span>
-              </label>
+             </label>
             </div>
           </form>
 

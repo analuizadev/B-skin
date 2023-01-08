@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*{
+    font-family: 'Comfortaa', cursive;
+}
+
 .modal{
     position: fixed;
     top: 0;
@@ -65,11 +71,14 @@
     padding: 5px 10px;
     font-size: 17px;
     border-radius: 20px;
+    color: #0e4e96;
+    font-family: 'Comfortaa', cursive;
 }
 
 .modal_form textarea{
     height: 50px;
     padding: 10px;
+    font-family: 'Comfortaa', cursive;
 }
 
 .modal_field:hover{
@@ -80,20 +89,27 @@
     border: 1px solid #0e4e96;
 }
 
-.container{
-    display: inline;
+.div_active{
+    display: flex;
+}
+
+.active_form{
+    display: block;
     position: relative;
+    margin-right: 10px;
     padding-left: 35px;
-    margin-right: 15px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     color: #0e4e96;
     text-transform: uppercase;
 }
 
-.modal_active{
+.active_form input{
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -111,21 +127,21 @@
     border-radius: 50%;
 }
 
-.container:hover input ~ .checkmark{
+.active_form:hover input ~.checkmark{
     background-color: #1866c0a7;
 }
 
-.checkmark::after{
+.checkmark:after{
     content: "";
     position: absolute;
     display: none;
 }
 
-.container input:checked ~ .checkmark:after{
+.active_form input:checked ~.checkmark:after{
     display: block;
 }
 
-.container .checkmark:after{
+.active_form .checkmark:after{
     top: 9px;
     left: 9px;
     width: 8px;
