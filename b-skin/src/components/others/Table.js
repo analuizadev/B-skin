@@ -2,9 +2,9 @@ import styles from './Table.module.css';
 
 import {RxPencil1} from 'react-icons/rx';
 import {TiDeleteOutline} from 'react-icons/ti';
-import {BsCircleFill} from 'react-icons/bs';
 
 import EditModal from './EditModal';
+import React from 'react';
 
 function Table(){
 
@@ -71,73 +71,6 @@ function Table(){
                                 <td>on</td>
                                 <td>botões</td>
                             </tr>
-                            <tr>
-                                <td>Cantão</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-
                             <tr>
                                 <td>Amazon</td>
                                 <td>11/02/2021</td>
