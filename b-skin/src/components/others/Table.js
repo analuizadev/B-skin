@@ -4,7 +4,8 @@ import {RxPencil1} from 'react-icons/rx';
 import {TiDeleteOutline} from 'react-icons/ti';
 
 import EditModal from './EditModal';
-import React from 'react';
+import { useState, useEffect } from 'react';
+import { Popover } from 'bootstrap';
 
 function Table(){
 
@@ -12,7 +13,7 @@ function Table(){
         <>
             <div className={styles.table}>
 
-            <table>
+            <table id="providersTb">
                 <caption>Providers</caption>
                 
                 <div className={styles.radius}>
@@ -28,61 +29,8 @@ function Table(){
                     </thead>
 
                         <tbody>
-                        <div className={styles.scroll}>
-                            <tr>
-                                <td>Nike</td>
-                                <td>11/02/2021</td>
-                                <td className={styles.on}></td>
-                                <td><button><RxPencil1 /></button> <span><button><TiDeleteOutline /></button></span></td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td className={styles.off}></td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Lv</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Farm</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Adidas</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
-                            <tr>
-                                <td>Amazon</td>
-                                <td>11/02/2021</td>
-                                <td>on</td>
-                                <td>botões</td>
-                            </tr>
+                        <div id="providers" className={styles.scroll}>
+            
                         </div>
                     </tbody>
                 </div>

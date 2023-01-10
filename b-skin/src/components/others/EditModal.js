@@ -3,7 +3,7 @@ import styles from './EditModal.module.css';
 function EditModal(){
 
     return(
-        <div className={styles.modal}>
+      <div className={styles.modal}>
         <div className={styles.modal_content}>
           <header>
             <p>Edit Provider</p>

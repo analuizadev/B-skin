@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import { BsFillPersonFill } from "react-icons/bs";
 import { BsBasket3 } from "react-icons/bs";
+
 import styles from "./NavBar.module.css";
 
 import Container from './Container';
@@ -11,6 +12,7 @@ function NavBar(){
     return(
         <nav className={styles.nav}>
             <Container>
+               
                 <ul className={styles.navbar_list}>
                     <p className={styles.logo}>B-Skin</p>
                     <li><Link to="/">Home</Link></li>
