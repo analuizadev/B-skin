@@ -1,4 +1,4 @@
-import React, {Fragment, useState, useEffect} from 'react';
+import React, {Fragment, useState, useEffect, useMemo} from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './components/others/Theme';
 import GlobalTheme from './components/others/Global';
@@ -16,6 +16,7 @@ import ShopPage from './components/pages/ShopPage';
 
 import Providers from './components/services/Providers';
 import Order from './components/services/Order';
+import ProviderDetails from './components/pages/ProviderDetails';
 
 import NavBar from './components/layout/NavBar';
 import Container from './components/layout/Container';
@@ -70,6 +71,7 @@ function App() {
               <Route path="/shoppage" element={<ShopPage />}></Route>
               <Route path="/providers" element={<Providers />}></Route>
               <Route path="/order" element={<Order />}></Route>
+              <Route path="/details/:id" element={<ProviderDetails />}></Route>
             </Routes>
           </Container>
           <Footer />
