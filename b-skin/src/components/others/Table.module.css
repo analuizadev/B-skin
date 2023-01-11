@@ -13,6 +13,7 @@
     width: 50%;
     margin-top: 2em;
     box-shadow: 0 0 40px 0 rgb(0 0 0 / 15%);
+    border-radius: 2.5%;
 }
 
 .table caption{
@@ -47,6 +48,7 @@
 
 .scroll tr{
     font-size: 17px;
+    cursor: pointer;
 }
 
 .scroll tr:hover{
