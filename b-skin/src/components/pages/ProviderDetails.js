@@ -3,23 +3,28 @@ import { useParams } from "react-router-dom";
 
 import styles from './Details.module.css';
 
-import logo from '../img/logo.png';
-
 function ProviderDetails (){
 
-    const id = useParams()
+    const param = useParams()
 
     const [providerDetails, setProviderDetails ] = useState([])
 
-    useEffect(() =>{
-        fetch(`https://localhost:5001/providers/details/3`, {
+
+    useEffect(() => {
+
+        setTimeout(() => {
+            fetch(`https://localhost:5001/providers/details/${param.id}`, {
             method: 'GET'
-        }).then((resp) => resp.json())
-        .then((data) =>{
-            setProviderDetails(data)
-            console.log(data)
+            }).then((resp) => resp.json())
+            .then((data) =>{
+                setProviderDetails(data)
+                console.log(data)
+            })
         })
-    }, [id])
+
+
+    }, [param])
+        
 
     return(
         <>
@@ -37,7 +42,6 @@ function ProviderDetails (){
                         )}</p>
                     </div>
                     <div className={styles.logo}>
-                        <img src={logo} />
                     </div>
                 </div>
             ) : (
