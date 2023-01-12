@@ -15,15 +15,9 @@
     z-index: -1;
 }
 
-.modal_open{
-    opacity: 1;
-    z-index: 1;
-}
-
 .modal header{
     height: 40px;
     display: flex;
-    font-size: 40px;
     justify-content: flex-end;
     align-items: center;
     position: relative;
@@ -36,7 +30,7 @@
     margin: 0 auto;
     width: 100%;
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .modal_content{
@@ -174,7 +168,7 @@
 
 .modal footer button{
     text-align: center;
-    padding: 8px;
+    padding: 10px;
     color: white;
     background-color: #0e4e96;
     border-style: none;
@@ -183,6 +177,7 @@
     margin-right: 10px;
     border-radius: 20px;
     line-height: 20px;
+    font-size: 17px;
 }
 
 .modal footer button:hover{

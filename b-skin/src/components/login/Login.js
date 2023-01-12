@@ -1,7 +1,11 @@
-function Login(){
+function Login({ setOpenLogin }){
 
     return(
-        <div>Modal</div>
+        <>
+            <div className="modal-"></div>
+            <p>Login</p>
+            <button onClick={() => {setOpenLogin(false)}}>x</button>
+        </>
     )
 }
 

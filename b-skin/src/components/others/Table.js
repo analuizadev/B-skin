@@ -4,6 +4,8 @@ import {RxPencil1} from 'react-icons/rx';
 import {TiDeleteOutline} from 'react-icons/ti';
 
 import EditModal from './EditModal';
+import { useState } from 'react';
+
 import ProviderDetails from '../pages/ProviderDetails';
 import { BsWindowSidebar } from 'react-icons/bs';
 
@@ -22,8 +24,10 @@ import { BsWindowSidebar } from 'react-icons/bs';
 
 function Table({ prov }){
 
-    function details() {
-        window.location.href='/details/:id'
+    const [modalOpen, setModalOpen] = useState(false);
+
+    function details(id) {
+        window.location.href=`providers/details/${id}`
     }
 
     return(
@@ -52,14 +56,14 @@ function Table({ prov }){
                                 prov.map(providers => {
 
                                     return(
-                                        <tr onClick={details} key={providers.id}>
-                                            <td>{providers.name}</td>
+                                        <tr key={providers.id}>
+                                            <td onClick={() => details(providers.id)}>{providers.name}</td>
                                             <td>{providers.document}</td>
                                             {providers.isActive === true ? (
                                                 <td className={styles.on}></td>
                                             ) : <td className={styles.off}></td>}
                                             <td>
-                                            <button><RxPencil1 /></button> <span><button><TiDeleteOutline /></button></span>
+                                            <button onClick={() => {setModalOpen(true)}}><RxPencil1 /></button> <span><button><TiDeleteOutline /></button></span>
                                             </td>
                                         </tr>
                                     )
@@ -73,7 +77,7 @@ function Table({ prov }){
 
             </div>
 
-            <EditModal />
+            {modalOpen && <EditModal setOpenModal={setModalOpen}/>}
         </>
     )
 }

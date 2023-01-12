@@ -1,13 +1,13 @@
 import styles from './EditModal.module.css';
 
-function EditModal(){
+function EditModal({ setOpenModal }){
 
     return(
       <div className={styles.modal}>
         <div className={styles.modal_content}>
           <header>
             <p>Edit Provider</p>
-            <span className={styles.modal_close}>&#10006;</span>
+            <span onClick={() => {setOpenModal(false)}} className={styles.modal_close}>&#10006;</span>
           </header>
 
           <form className={styles.modal_form}>
@@ -34,7 +34,7 @@ function EditModal(){
 
           <footer>
             <button id="save">Save</button>
-            <button id="cancel">Cancel</button>
+            <button onClick={() => {setOpenModal(false)}} id="cancel">Cancel</button>
           </footer>
         </div>
       </div>

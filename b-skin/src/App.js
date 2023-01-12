@@ -71,7 +71,7 @@ function App() {
               <Route path="/shoppage" element={<ShopPage />}></Route>
               <Route path="/providers" element={<Providers />}></Route>
               <Route path="/order" element={<Order />}></Route>
-              <Route path="/details/:id" element={<ProviderDetails />}></Route>
+              <Route path="providers/details/:id" element={<ProviderDetails />}></Route>
             </Routes>
           </Container>
           <Footer />
