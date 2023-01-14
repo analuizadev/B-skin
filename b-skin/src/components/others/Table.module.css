@@ -48,11 +48,14 @@
 
 .scroll tr{
     font-size: 17px;
-    cursor: pointer;
 }
 
 .scroll tr:hover{
     background-color: #96c1f357;
+}
+
+.scroll tr .name{
+    cursor: pointer;
 }
 
 .scroll svg{

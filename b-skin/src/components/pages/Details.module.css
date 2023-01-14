@@ -1,3 +1,13 @@
+.back{
+    height: 50px;
+    font-size: 25px;
+    color: #0e4e96;
+}
+
+.back:hover{
+    color: #0e4d9682;
+}
+
 .body{
     min-height: 350px;
     width: 800px;

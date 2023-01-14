@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import {BsChevronLeft} from 'react-icons/bs'
+
 import styles from './Details.module.css';
 
 function ProviderDetails (){
+
+    function back(){
+        window.location.href='/providers'
+    }
 
     const param = useParams()
 
@@ -28,6 +34,7 @@ function ProviderDetails (){
 
     return(
         <>
+            <button onClick={back} className={styles.back}><BsChevronLeft /></button>
             {providerDetails.name ? (
                 <div className={styles.body}>
                     <h2>{providerDetails.name}</h2>

@@ -1,10 +1,41 @@
+import styles from './Login.module.css';
+
+import Modal from 'react-modal';
+
 function Login({ setOpenLogin }){
+
+    const customStyles = {
+        content: {
+          top: '50%',
+          left: '50%',
+          right: 'auto',
+          bottom: 'auto',
+          width: '50%',
+          height: '50%',
+          marginRight: '-50%',
+          transform: 'translate(-50%, -50%)',
+        },
+      };
 
     return(
         <>
-            <div className="modal-"></div>
-            <p>Login</p>
-            <button onClick={() => {setOpenLogin(false)}}>x</button>
+            <Modal style={customStyles} isOpen={()=>{setOpenLogin(true)}} onRequestClose={setOpenLogin}>
+                <div className={styles.modal_container}>
+                    <header>
+                        <h2>Login</h2>
+                        <button onClick={() => {setOpenLogin(false)}}>&#10006;</button>
+                    </header>
+                    <form>
+                        <input type="email" placeholder="Email"></input>
+                        <input type="password" placeholder="Password"></input>
+                        <a href='/'>Forgot password?</a>
+                    </form>
+                    <footer>
+                        <button>New account</button>
+                        <button>Log In</button>
+                    </footer>
+                </div>
+            </Modal>
         </>
     )
 }

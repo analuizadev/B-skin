@@ -5,21 +5,7 @@ import {TiDeleteOutline} from 'react-icons/ti';
 
 import EditModal from './EditModal';
 import { useState } from 'react';
-
-import ProviderDetails from '../pages/ProviderDetails';
-import { BsWindowSidebar } from 'react-icons/bs';
-
-/*const Row = ({ providers }) => {
-
-    const datas = Object.keys(providers)
-    return(
-        <tr key={providers.id}>
-            {
-                datas.map( data => <td data={data}>{providers[data]}</td> )
-            }
-        </tr>
-    )
-}*/
+import { useParams } from 'react-router-dom';
 
 
 function Table({ prov }){
@@ -29,6 +15,7 @@ function Table({ prov }){
     function details(id) {
         window.location.href=`providers/details/${id}`
     }
+
 
     return(
         <>
@@ -57,13 +44,13 @@ function Table({ prov }){
 
                                     return(
                                         <tr key={providers.id}>
-                                            <td onClick={() => details(providers.id)}>{providers.name}</td>
+                                            <td className={styles.name} onClick={() => details(providers.id)}>{providers.name}</td>
                                             <td>{providers.document}</td>
                                             {providers.isActive === true ? (
                                                 <td className={styles.on}></td>
                                             ) : <td className={styles.off}></td>}
                                             <td>
-                                            <button onClick={() => {setModalOpen(true)}}><RxPencil1 /></button> <span><button><TiDeleteOutline /></button></span>
+                                            <button onClick={() => setModalOpen(true)} ><RxPencil1 /></button> <span><button><TiDeleteOutline /></button></span>
                                             </td>
                                         </tr>
                                     )
