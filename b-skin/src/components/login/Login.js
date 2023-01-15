@@ -4,6 +4,10 @@ import Modal from 'react-modal';
 
 function Login({ setOpenLogin }){
 
+    function newAccount(){
+        window.location.href = '/newaccount'
+    }
+
     const customStyles = {
         content: {
           top: '50%',
@@ -31,7 +35,7 @@ function Login({ setOpenLogin }){
                         <a href='/'>Forgot password?</a>
                     </form>
                     <footer>
-                        <button>New account</button>
+                        <button onClick={newAccount}>New account</button>
                         <button>Log In</button>
                     </footer>
                 </div>

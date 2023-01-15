@@ -17,7 +17,7 @@ import ShopPage from './components/pages/ShopPage';
 import Providers from './components/services/Providers';
 import Order from './components/services/Order';
 import ProviderDetails from './components/pages/ProviderDetails';
-
+import NewAccount from './components/login/NewAccount';
 import NavBar from './components/layout/NavBar';
 import Container from './components/layout/Container';
 import Footer from './components/layout/Footer';
@@ -71,6 +71,7 @@ function App() {
               <Route path="/shoppage" element={<ShopPage />}></Route>
               <Route path="/providers" element={<Providers />}></Route>
               <Route path="/order" element={<Order />}></Route>
+              <Route path="/newaccount" element={<NewAccount />}></Route>
               <Route path="providers/details/:id" element={<ProviderDetails />}></Route>
             </Routes>
           </Container>
