@@ -16,6 +16,20 @@ function Table({ prov }){
         window.location.href=`providers/details/${id}`
     }
 
+    const [provider, setProvider] = useState([])
+
+    function removeProvider(id) {
+        
+        fetch(`https://localhost:5001/providers/details/${id}` ,{
+            method:'DELETE',
+        }).then((resp) => resp.json())
+        .then((data) => {
+            setProvider(provider.filter((provi) => provi.id !== id))
+            alert('removido com sucesso')
+        })
+        .catch((err) => console.log(err))
+    }
+
 
     return(
         <>
@@ -50,7 +64,8 @@ function Table({ prov }){
                                                 <td className={styles.on}></td>
                                             ) : <td className={styles.off}></td>}
                                             <td>
-                                            <button onClick={() => setModalOpen(true)} ><RxPencil1 /></button> <span><button><TiDeleteOutline /></button></span>
+                                            <button onClick={() => setModalOpen(true)} ><RxPencil1 /></button> <span>
+                                                <button onClick={removeProvider}><TiDeleteOutline /></button></span>
                                             </td>
                                         </tr>
                                     )

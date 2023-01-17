@@ -14,7 +14,7 @@ import News from './components/pages/News';
 import Shirt from './components/pages/Shirt';
 import ShopPage from './components/pages/ShopPage';
 
-import Providers from './components/services/Providers';
+import Providers from './components/pages/Providers';
 import Order from './components/services/Order';
 import ProviderDetails from './components/pages/ProviderDetails';
 import NewAccount from './components/login/NewAccount';

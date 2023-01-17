@@ -1,6 +1,6 @@
 import styles from './Home.module.css';
 
-import Carousel from '../services/Carousel';
+import Carousel from '../services/CarouselHome';
 
 function Home(){
 
