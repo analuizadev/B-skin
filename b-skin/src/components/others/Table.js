@@ -97,7 +97,7 @@ function Table(){
 
             </div>
 
-            {modalOpen && <EditModal setOpenModal={setModalOpen}/>}
+            {modalOpen && <EditModal setOpenModal={setModalOpen} id={provider.id}/>}
         </>
     )
 }
