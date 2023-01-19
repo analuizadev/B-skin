@@ -4,11 +4,41 @@ import {RxPencil1} from 'react-icons/rx';
 import {TiDeleteOutline} from 'react-icons/ti';
 
 import EditModal from './EditModal';
-import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState, useEffect, useCallback } from 'react';
+
+import Message from '../services/Message';
 
 
-function Table({ prov }){
+function Table(){
+
+    const [type, setType] = useState()
+    const [message, setMessage] = useState('')
+    const [resp, setResp] = useState(false)
+    const [provider, setProvider] = useState([])
+
+    function providerList() {
+        fetch('https://localhost:5001/providers/list', {
+          method: 'GET'
+        })
+        .then(resp => resp.json())
+        .then(data => {
+          setProvider(data)
+        })
+    }
+
+    const deleteProvider = useCallback((id) => {
+        fetch(`https://localhost:5001/providers/exclude/${id}`, { method: 'DELETE' })
+            .then(resp => resp.json)
+            .then((data) => {
+                setResp(!resp)
+                setMessage('Success deleted provider!')
+                setType('sucess')
+            })
+    }, [resp])
+
+    useEffect(() =>{
+        providerList();
+    }, [deleteProvider])
 
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -16,23 +46,11 @@ function Table({ prov }){
         window.location.href=`providers/details/${id}`
     }
 
-    const [provider, setProvider] = useState([])
-
-    function removeProvider(id) {
-        
-        fetch(`https://localhost:5001/providers/details/${id}` ,{
-            method:'DELETE',
-        }).then((resp) => resp.json())
-        .then((data) => {
-            setProvider(provider.filter((provi) => provi.id !== id))
-            alert('removido com sucesso')
-        })
-        .catch((err) => console.log(err))
-    }
-
 
     return(
         <>
+
+           {message && <Message type={type} msg={message}/>}
 
             <div className={styles.table}>
 
@@ -54,7 +72,7 @@ function Table({ prov }){
                         <tbody>
                         <div id="providers" className={styles.scroll}>
                             {
-                                prov.map(providers => {
+                                provider.map(providers => {
 
                                     return(
                                         <tr key={providers.id}>
@@ -65,7 +83,7 @@ function Table({ prov }){
                                             ) : <td className={styles.off}></td>}
                                             <td>
                                             <button onClick={() => setModalOpen(true)} ><RxPencil1 /></button> <span>
-                                                <button onClick={removeProvider}><TiDeleteOutline /></button></span>
+                                                <button onClick={() => deleteProvider(providers.id)}><TiDeleteOutline /></button></span>
                                             </td>
                                         </tr>
                                     )
