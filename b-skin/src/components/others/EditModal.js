@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 
 function EditModal({ setOpenModal }){
 
-  const [updateProvider, setUpdateProvider] = useState([])
+  /*const [updateProvider, setUpdateProvider] = useState([])
 
   function providerDetailsUpdate(id){
     fetch(`https://localhost:5001/providers/update/${id}`,{
@@ -20,7 +20,7 @@ function EditModal({ setOpenModal }){
 
   useEffect(() => {
     providerDetailsUpdate()
-  }, [])
+  }, [])*/
 
   const customStyles = {
     content: {
@@ -47,32 +47,16 @@ function EditModal({ setOpenModal }){
               </header>
 
               <form className={styles.modal_form}>
-            {
-
-              updateProvider.map((provider) =>{
-                return(
-                  <>
                     <input id="name" type="text" placeholder="NAME" className={styles.modal_field}>
-                      {provider.name}
                     </input>
                     <input id="email" type="text" placeholder="EMAIL" className={styles.modal_field}>
-                      {provider.email}
                     </input>
                     <input id="document" type="text" placeholder="DOCUMENT" className={styles.modal_field}>
-                      {provider.document}
                     </input>
                     <input id="phone" type="text" placeholder="PHONE" className={styles.modal_field}>
-                      {provider.phone}
                     </input>
                     <textarea id="description" type="text" placeholder="DESCRIPTION" className={styles.modal_field}>
-                      {provider.description}
                     </textarea>
-                  </>
-                )
-              })
-
-            }
-
             
 
                   <div className={styles.div_active}>

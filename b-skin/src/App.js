@@ -13,6 +13,7 @@ import Home from './components/pages/Home';
 import News from './components/pages/News';
 import Shirt from './components/pages/Shirt';
 import ShopPage from './components/pages/ShopPage';
+import Contact from './components/services/Contact';
 
 import Providers from './components/pages/Providers';
 import Order from './components/services/Order';
@@ -72,6 +73,7 @@ function App() {
               <Route path="/providers" element={<Providers />}></Route>
               <Route path="/order" element={<Order />}></Route>
               <Route path="/newaccount" element={<NewAccount />}></Route>
+              <Route path="/contact" element={<Contact />}></Route>
               <Route path="providers/details/:id" element={<ProviderDetails />}></Route>
             </Routes>
           </Container>

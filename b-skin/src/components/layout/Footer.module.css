@@ -8,7 +8,7 @@
 
 .rodape{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #0e4d9671;
     width: 950px;
@@ -26,6 +26,7 @@
     list-style: none;
 }
 
+
 .payment li{
     display: inline;
 }
@@ -37,6 +38,10 @@
     background-color: rgb(109, 109, 109);
     padding: 5px;
     border-radius: 5px;
+}
+
+.help li{
+    padding-bottom: 10px;
 }
 
 .help a{
@@ -62,4 +67,65 @@
 .direitos svg{
     color: #0e4d96;
     font-size: 14px;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+}
+
+.social h2{
+    text-align: center;
+}
+
+.social .ana{
+    float: left;
+    margin-right: 15px;
+}
+
+.social .ana, .carlos{
+    color: rgb(154, 153, 153);
+    text-align: center;
+}
+
+.social .ana li{
+    display: inline;
+    padding: 10px;
+}
+
+.social h3{
+    font-size: 15px;
+}
+
+.social .carlos{
+    float: right;
+    border-left: 1px solid;
+    border-color: #0e4d9671;
+    padding-left: 10px;
+}
+
+.social .carlos li{
+    display: inline;
+    padding: 10px;
+}
+
+.social a{
+    text-decoration: none;
+}
+
+.social svg{
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    color: rgb(154, 153, 153);
+}
+
+.social svg:hover{
+    color: #0e4d96;
+    font-size: 21px;
+}
+
+
+.help, .payment, .social{
+    height: 130px;
 }
