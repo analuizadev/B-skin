@@ -5,12 +5,16 @@ import Visa from '../img/visto.png';
 import Pix from '../img/pix.png';
 
 import {Link} from 'react-router-dom';
-import {BiCopyright} from 'react-icons/bi'
+import {BiCopyright} from 'react-icons/bi';
+import {BsGithub, BsLinkedin} from 'react-icons/bs';
 
 function Footer(){
 
     const git= "https://github.com/analuizadev";
     const git2= "https://github.com/CarlosE-Dev";
+
+    const linkAna = "https://www.linkedin.com/in/ana-luiza-de-castro-6580081b7";
+    const linkCarlos = "https://www.linkedin.com/in/carlose-dev"
 
     return(
         <footer className={styles.footer}>
@@ -33,10 +37,34 @@ function Footer(){
                         <img src={Pix} />
                     </li>
                 </div>
+                <div className={styles.social}>
+                    <h2>Team</h2>
+                    <div className={styles.medias}>
+                        <div className={styles.ana}>
+                            <h3>Ana Luiza</h3>
+                            <li>
+                                <a href={git} target="_blank"> <BsGithub /> </a>
+                            </li>
+                            <li>
+                                <a href={linkAna} target="_blank"> <BsLinkedin /> </a>
+                            </li>
+                        </div>
+                        <div className={styles.carlos}>
+                            <h3>Carlos Eduardo</h3>
+                            <li>
+                                <a href={git2} target="_blank"> <BsGithub /> </a>
+                            </li>
+                            <li>
+                                <a href={linkCarlos} target="_blank"> <BsLinkedin /> </a>
+                            </li>
+                        </div>
+                    </div>
+                    
+                </div>
             </ul>
 
             <ul className={styles.direitos}>
-                <p><span><BiCopyright /></span>2023 B-skin. Todos os direitos reservados.</p>
+                <p><span><BiCopyright /></span>2023 B-skin. All Rights Reserved.</p>
             </ul>
             
         </footer>
