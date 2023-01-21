@@ -1,0 +1,78 @@
+.body{
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+}
+
+.body header{
+    display: flex;
+}
+
+.body header button{
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -5px;
+    text-align: center;
+    width: 33px;
+    height: 30px;
+}
+
+.body header button:hover{
+    background-color: #0e4d9655;
+    border-radius: 20px;
+}
+
+.body h2{
+    color: #0e4e96;
+    margin: 0 auto;
+}
+
+.container{
+    height: 70%;
+}
+
+.container img{
+    width: 160px;
+    height: 160px;
+}
+
+.container h2{
+    text-align: center;
+    margin-top: 35%;
+    font-size: 45px;
+}
+
+.container p{
+    font-size: 17px;
+    color: rgb(154, 153, 153);
+    text-align: center;
+}
+
+.container div{
+    display: flex;
+    justify-content: center;
+}
+
+.shop{
+    background-color: #0e4e96;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.shop a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.4s ease-in;
+}
+
+.shop a:hover{
+    color: #0e4e96;
+}
+
+.shop:hover{
+    background-color: #0e4d9657;
+}

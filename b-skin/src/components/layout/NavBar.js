@@ -9,10 +9,13 @@ import styles from "./NavBar.module.css";
 import Container from './Container';
 import Search from '../services/Search';
 import Login from '../login/Login';
+import Order from '../services/Order';
 
 function NavBar(){
 
     const [loginOpen, setLogin] = useState(false)
+
+    const [modalOpen, setModalOpen] = useState(false);
 
     return(
         <>
@@ -29,13 +32,15 @@ function NavBar(){
                         <Search className={styles.search}/>
                         <div className={styles.contact}>
                             <li onClick={() => {setLogin(true)}}><BsFillPersonFill /></li>
-                            <li><Link to="/shoppage"><BsBasket3 /></Link></li>
+                            <li onClick={() => {setModalOpen(true)}}><BsBasket3 /></li>
                         </div>
                     </ul>
                 </Container>
             </nav>
 
             {loginOpen && <Login setOpenLogin={setLogin} />}
+
+            {modalOpen && <Order setOpenModal={setModalOpen} />}
 
         </>        
     )
