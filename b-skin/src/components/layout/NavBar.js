@@ -9,10 +9,13 @@ import styles from "./NavBar.module.css";
 import Container from './Container';
 import Search from '../services/Search';
 import Login from '../login/Login';
+import Order from '../services/Order';
 
 function NavBar(){
 
     const [loginOpen, setLogin] = useState(false)
+
+    const [modalOpen, setModalOpen] = useState(false);
 
     return(
         <>
@@ -43,6 +46,8 @@ function NavBar(){
             </nav>
 
             {loginOpen && <Login setOpenLogin={setLogin} />}
+
+            {modalOpen && <Order setOpenModal={setModalOpen} />}
 
         </>        
     )
