@@ -18,20 +18,27 @@ function NavBar(){
         <>
             <nav className={styles.nav}>
                 <Container>
-                
-                    <ul className={styles.navbar_list}>
-                        <p className={styles.logo}>B-Skin</p>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/news">News</Link></li>
-                        <li><Link to="/shirt">Shirt</Link></li>
-                    </ul>
-                    <ul className={styles.services}>
-                        <Search className={styles.search}/>
-                        <div className={styles.contact}>
-                            <li onClick={() => {setLogin(true)}}><BsFillPersonFill /></li>
-                            <li><Link to="/shoppage"><BsBasket3 /></Link></li>
+                    <div className={styles.container_nav}>
+                        <ul className={styles.navbar_list}>
+                            <p className={styles.logo}>B-Skin</p>
+                            <div className={styles.menu}>
+                                <li><Link to="/">Home</Link></li>
+                                <li><Link to="/news">News</Link></li>
+                                <li><Link to="/shirt">Shirt</Link></li>
+                            </div>
+                        </ul>
+                        <ul className={styles.services}>
+                            <Search className={styles.search}/>
+                        </ul>
+                        <div className={styles.flex_contact}>
+                            <div className={styles.contact}>
+                                <li onClick={() => {setLogin(true)}}><BsFillPersonFill /></li>
+                                <li><Link to="/shoppage"><BsBasket3 /></Link></li>
+                            </div>
                         </div>
-                    </ul>
+                        
+                    </div>
+                    
                 </Container>
             </nav>
 

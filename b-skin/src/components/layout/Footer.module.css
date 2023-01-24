@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #0e4d9671;
-    width: 950px;
+    width: 90%;
     margin: 0 auto;
     padding-bottom: 30px;
 }
@@ -128,4 +128,16 @@
 
 .help, .payment, .social{
     height: 130px;
+}
+
+@media (max-width: 750px){
+    .footer{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .rodape{
+        flex-direction: column;
+        width: 345px;
+    }
 }
