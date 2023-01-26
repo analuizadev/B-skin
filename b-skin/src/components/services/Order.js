@@ -24,7 +24,7 @@ function Order({ setOpenModal }){
                     </header>
                     <div class="container">
                         <h2><img src={Bag}></img></h2>
-                        <p>There are no items in your bag.</p>
+                        <p>There are no items in your bag!</p>
                         <div>
                             <button class="shop"><Link to='/shirt'>shop</Link></button>
                         </div>
