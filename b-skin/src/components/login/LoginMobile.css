@@ -4,27 +4,29 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .title{
-    height: 20%;
     text-align: center;
     color: #0e4e96;
 }
 
+.title h2{
+    font-size: 1.9em;
+}
 .form{
     display: flex;
     flex-direction: column;
     gap: 20px;
     height: 100%;
-    width: 60%;
-    margin: 0 auto;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
 
 .form input{
-    width: 50%;
+    width: 90%;
     padding: 10px;
     border-radius: 20px;
     font-size: 15px;
@@ -44,38 +46,21 @@
 }
 
 .container footer{
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
 
 .container footer button{
+    margin-top: 15px;
    background-color: #0e4e96;
    color: white;
    border-radius: 20px;
    padding: 10px;
-   font-size: 17px;
+   font-size: 15px;
+   width: 150px;
 }
 
 .container footer button:hover{
     background-color: #1866c0a7;
-}
-
-@media (max-width: 260px){
-    .form{
-        width: 100%;
-    }
-
-    .form input{
-        width: 90%;
-    }
-
-    .container footer button{
-       background-color: #0e4e96;
-       color: white;
-       border-radius: 20px;
-       padding: 10px;
-       font-size: 15px;
-       width: 150px;
-    }
 }

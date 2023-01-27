@@ -19,3 +19,9 @@ button{
 .moon{
     display: none;
 }
+
+@media(max-width:600px){
+    #theme{
+        display: none;
+    }
+}

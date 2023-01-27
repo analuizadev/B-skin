@@ -13,12 +13,15 @@ import Home from './components/pages/Home';
 import News from './components/pages/News';
 import Shirt from './components/pages/Shirt';
 import ShopPage from './components/pages/ShopPage';
-import Contact from './components/services/Contact';
-
 import Providers from './components/pages/Providers';
-import Order from './components/services/Order';
 import ProviderDetails from './components/pages/ProviderDetails';
+import Contact from './components/services/Contact';
+import Order from './components/services/Order';
 import NewAccount from './components/login/NewAccount';
+import LoginMobile from './components/login/LoginMobile';
+import Bag from './components/others/Bag';
+
+
 import NavBar from './components/layout/NavBar';
 import Container from './components/layout/Container';
 import Footer from './components/layout/Footer';
@@ -74,6 +77,8 @@ function App() {
               <Route path="/order" element={<Order />}></Route>
               <Route path="/newaccount" element={<NewAccount />}></Route>
               <Route path="/contact" element={<Contact />}></Route>
+              <Route path="/loginMobile" element={<LoginMobile />}></Route>
+              <Route path="/bag" element={<Bag />}></Route>
               <Route path="providers/details/:id" element={<ProviderDetails />}></Route>
             </Routes>
           </Container>

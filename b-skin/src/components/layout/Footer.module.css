@@ -47,6 +47,7 @@
 .help a{
     color: rgb(154, 153, 153);
     text-decoration: none;
+    font-size: 15px;
 }
 
 .help a:hover{
@@ -57,6 +58,7 @@
     text-align: center;
     color: #0e4d96;
     font-weight: bold;
+    font-size: 15px;
 }
 
 .direitos span{
@@ -138,6 +140,57 @@
     
     .rodape{
         flex-direction: column;
-        width: 345px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 350px){
+    .rodape{
+        display: block;
+        padding-left: 0;
+    }
+
+    .help, .payment, .social{
+        text-align: left;
+    }
+
+    .social h2{
+        text-align: left;
+    }
+
+    .medias{
+        display: flex;
+    }
+
+    .direitos{
+        text-align: left;
+    }
+}
+
+@media (max-width: 304px){
+    .direitos{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 276px){
+    .social{
+        height: fit-content;
+    }
+    
+    .medias{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social .carlos{
+        text-align: left;
+        border: none;
+        padding-left: 0;
+    }
+
+    .social .ana{
+        justify-content: left;
+        text-align: left;
     }
 }
