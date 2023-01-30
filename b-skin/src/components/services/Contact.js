@@ -73,22 +73,28 @@ function Contact(){
                     </div>
                     
                     <div class="contact">
-                        <h2>Contact Us</h2>
-                        <p>Our service team is available from Monday to Friday from 8am to 8pm, except holidays.</p>
-                        <div class="contact-body">
-                            <ul>
-                                <li>
-                                    <h1><HiOutlineMail /></h1>
-                                    <h2>Email</h2>
-                                    <p>bskin@contact.com</p>
-                                </li>
-                                <li class="phone">
-                                    <h1><BsTelephone /></h1>
-                                    <h2>Phone</h2>
-                                    <p>(63) 3009-3313</p>
-                                </li>
-                            </ul>
+                        <div class="contactbody">
+                            <div class="head">
+                                <h2>Contact Us</h2>
+                                <p>Our service team is available from Monday to Friday from 8am to 8pm, except holidays.</p>
+                            </div>
+                            
+                            <div class="contact-body">
+                                <ul>
+                                    <li>
+                                        <h1><HiOutlineMail /></h1>
+                                        <h2>Email</h2>
+                                        <p>bskin@contact.com</p>
+                                    </li>
+                                    <li class="phone">
+                                        <h1><BsTelephone /></h1>
+                                        <h2>Phone</h2>
+                                        <p>(63) 3009-3313</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                        
                     </div>
                     
                 </div>
