@@ -8,12 +8,9 @@ import styles from "./NavBar.css";
 
 import Container from './Container';
 import Search from '../services/Search';
-import Login from '../login/Login';
 import Order from '../services/Order';
 
 function NavBar(){
-
-    const [loginOpen, setLogin] = useState(false);
 
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -42,17 +39,15 @@ function NavBar(){
                                     </div>
 
                                     <div class="menu">
-                                        <li class="login"><Link to="/loginMobile">Login</Link></li>
                                         <li><Link to="/">Home</Link></li>
                                         <li><Link to="/news">News</Link></li>
                                         <li><Link to="/shirt">Shirt</Link></li>
-                                        <li class="bag"><Link to="/bag">Bag</Link></li>
+                                        <li class="bagMobile"><Link to="/bag">Bag</Link></li>
                                     </div>
                                 </div> 
 
                                 <div class="flex_contact">
-                                    <div class="contact">
-                                        <li onClick={() => {setLogin(true)}}><BsFillPersonFill /></li>
+                                    <div class="bag">
                                         <li onClick={() => {setModalOpen(true)}}><BsBasket3 /></li>
                                     </div>
                                 </div> 
@@ -69,8 +64,6 @@ function NavBar(){
                     
                 </Container>
             </nav>
-
-            {loginOpen && <Login setOpenLogin={setLogin} />}
 
             {modalOpen && <Order setOpenModal={setModalOpen} />}
 

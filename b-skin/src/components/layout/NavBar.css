@@ -70,9 +70,10 @@
     display: flex;
     margin-top: 70px;
     height: 45px;
+    padding-left: 10px;
 }
 
-.contact{
+.bag{
     padding-top: 0;
     display: flex;
     flex-direction: row;
@@ -83,22 +84,21 @@
     list-style: none;
 }
 
-.contact li{
+.bag li{
     cursor: pointer;
     padding-right: 10px;
 }
 
-.contact li svg{
+.bag li svg{
     font-size: 25px;
     color: #0e4e96;
 }
 
-.contact svg:hover{
+.bag svg:hover{
     color: #0e4d96b2;
 }
 
-.menu .login, 
-.menu .bag {
+.menu .bagMobile {
     display: none;
 }
 
@@ -127,7 +127,7 @@
         padding-top: 0;
     }
 
-    .contact li{
+    .bag li{
         padding-top: 0;
     }
 
@@ -207,6 +207,14 @@
     .menu-section.on .menu-toggle .three{
         transform: rotate(-45deg) translate(5px,-6px);
     }
+    
+    .bag{
+        display: none;
+    }
+
+    .menu-section.on .menu .bagMobile{
+        display: block;
+    }
 }
 
 @media (max-width: 350px){
@@ -217,14 +225,6 @@
 
 
 @media (max-width: 330px){
-    .contact{
-        display: none;
-    }
-
-    .menu-section.on .menu .login,
-    .menu-section.on .menu .bag{
-        display: block;
-    }
 
     .menu-section.on .menu li a{
         font-size: 1.2em;

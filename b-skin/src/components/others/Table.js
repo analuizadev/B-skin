@@ -40,7 +40,9 @@ function Table(){
         providerList();
     }, [deleteProvider])
 
-    const [modalOpen, setModalOpen] = useState(false);
+    function edit(id) {
+        window.location.href=`providers/update/${id}`
+    }
 
     function details(id) {
         window.location.href=`providers/details/${id}`
@@ -62,7 +64,7 @@ function Table(){
                         <div className={styles.interactive}>
                             <tr>
                                 <th>Name</th>
-                                <th>Document</th>
+                                <th className={styles.document_none}>Document</th>
                                 <th>Active</th>
                                 <th></th>
                             </tr>
@@ -77,12 +79,12 @@ function Table(){
                                     return(
                                         <tr key={providers.id}>
                                             <td className={styles.name} onClick={() => details(providers.id)}>{providers.name}</td>
-                                            <td>{providers.document}</td>
+                                            <td className={styles.document_none}>{providers.document}</td>
                                             {providers.isActive === true ? (
                                                 <td className={styles.on}></td>
                                             ) : <td className={styles.off}></td>}
                                             <td>
-                                            <button onClick={() => setModalOpen(true)} ><RxPencil1 /></button> <span>
+                                            <button onClick={() => edit(providers.id)} ><RxPencil1 /></button> <span>
                                                 <button onClick={() => deleteProvider(providers.id)}><TiDeleteOutline /></button></span>
                                             </td>
                                         </tr>
@@ -96,8 +98,6 @@ function Table(){
             </table>
 
             </div>
-
-            {modalOpen && <EditModal setOpenModal={setModalOpen} id={provider.id}/>}
         </>
     )
 }

@@ -59,6 +59,18 @@
 
 @media (max-width: 600px){
     .search{
-        width: 90%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 266px){
+    .search input{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 243px){
+    .search input{
+        font-size: 11px;
     }
 }
