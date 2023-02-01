@@ -17,8 +17,8 @@ import Providers from './components/pages/Providers';
 import ProviderDetails from './components/pages/ProviderDetails';
 import Contact from './components/services/Contact';
 import Order from './components/services/Order';
-import Bag from './components/others/Bag';
-import EditProvide from './components/others/EditProvide';
+import Bag from './components/pages/Bag';
+import EditProvide from './components/pages/EditProvide';
 
 
 import NavBar from './components/layout/NavBar';
