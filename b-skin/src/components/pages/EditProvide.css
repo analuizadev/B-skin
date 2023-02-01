@@ -21,14 +21,12 @@
 .edit-body form{
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .edit-body form input{
     padding: 10px;
     border-radius: 20px;
-    width: 60%;
-    margin: 0 auto;
+    width: 100%;
     font-size: 15px;
     color: #0e4e96;
     outline-style: none;
@@ -36,6 +34,7 @@
     box-shadow: 0 0 2px #0e4e96;
     text-indent: 10px;
     background-color: transparent;
+    margin-bottom: 20px;
 }
 
 .edit-body form input:hover,
@@ -52,7 +51,7 @@
     margin: 0 auto;
     padding: 10px;
     border-radius: 20px;
-    width: 60%;
+    width: 100%;
     min-height: 100px;
     height: 100%;
     font-size: 15px;
@@ -131,22 +130,6 @@
     display: flex;
     justify-content: center;
     margin-top: 3.5em;
-}
-
-.edit-body footer button{
-    background-color: #0e4e96;
-    color: white;
-    padding: 10px 25px;
-    font-size: 15px;
-    border-radius: 20px;
-    transition: .3s;
-}
-
-.edit-body footer button:hover{
-    box-shadow: inset 200px 0 0 #0e4d9677;
-    border-radius: 20px;
-    background-color: transparent;
-    color: #0e4e96;
 }
 
 @media (max-width: 960px){

@@ -3,10 +3,11 @@ import styles from './Table.module.css';
 import {RxPencil1} from 'react-icons/rx';
 import {TiDeleteOutline} from 'react-icons/ti';
 
-import EditModal from './EditModal';
+import EditModal from '../others/EditModal';
 import { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 
-import Message from '../services/Message';
+import Message from './Message';
 
 
 function Table(){
@@ -39,10 +40,6 @@ function Table(){
     useEffect(() =>{
         providerList();
     }, [deleteProvider])
-
-    function edit(id) {
-        window.location.href=`providers/update/${id}`
-    }
 
     function details(id) {
         window.location.href=`providers/details/${id}`
@@ -84,7 +81,7 @@ function Table(){
                                                 <td className={styles.on}></td>
                                             ) : <td className={styles.off}></td>}
                                             <td>
-                                            <button onClick={() => edit(providers.id)} ><RxPencil1 /></button> <span>
+                                            <button><Link to={`/providers/update/${providers.id}`}><RxPencil1 /></Link></button> <span>
                                                 <button onClick={() => deleteProvider(providers.id)}><TiDeleteOutline /></button></span>
                                             </td>
                                         </tr>

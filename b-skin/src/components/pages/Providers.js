@@ -1,5 +1,5 @@
 import EditModal from '../others/EditModal';
-import Table from '../others/Table';
+import Table from '../services/Table';
 import Container from '../layout/Container';
 
 
