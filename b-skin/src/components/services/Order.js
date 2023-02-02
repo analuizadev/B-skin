@@ -10,7 +10,7 @@ function Order({ setOpenModal }){
             top: 0,
             width: "450px",
             height: "100%",
-            left: "70%",
+            left: "74%",
         }
     }
 

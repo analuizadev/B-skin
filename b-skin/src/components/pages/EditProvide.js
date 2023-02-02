@@ -6,7 +6,6 @@ import styles from  './EditProvide.css';
 function EditProvide(){
 
     const [providerDetails, setProviderDetails] = useState([])
-    const [active, setActive] = useState()
 
     const param = useParams()
 
@@ -19,7 +18,6 @@ function EditProvide(){
             }).then((resp) => resp.json())
             .then((data) =>{
                 setProviderDetails(data)
-                setActive(data.isActive)
                 console.log(data)
             })
         })
@@ -28,11 +26,6 @@ function EditProvide(){
     useEffect(() => {
         providerInfo()
     }, [])
-
-    function setProviderActive(){
-        setActive(!active)
-        console.log(active)
-    }
 
     function editProvi(providerDetails) {
         fetch(`https://localhost:5001/providers/update/${providerDetails.id}`,{
