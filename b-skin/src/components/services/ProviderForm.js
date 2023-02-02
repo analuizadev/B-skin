@@ -6,10 +6,24 @@ import Submit from "./Submit";
 function ProviderForm({ providerDetails, handleSubmit, btnText }) {
 
     const [ info, setInfo ] = useState(providerDetails || {})
+    const [ active, setActive ] = useState(providerDetails.isActive ? "on" : "off")
 
     function handleChange(e) {
-        setInfo({ ...info, [e.target.name]: e.target.value})
-        console.log(info)
+        console.log(e.target.value);
+        if(e.target.type === "radio"){
+            setActive(e.target.value);
+
+            if(e.target.value === "on"){
+                setInfo({ ...info, [e.target.name]: true})
+            }
+
+            if(e.target.value === "off"){
+                setInfo({ ...info, [e.target.name]: false})
+            }
+        }
+        else{
+            setInfo({ ...info, [e.target.name]: e.target.value})
+        }
     }
 
     const submit = (e) => {
@@ -19,13 +33,6 @@ function ProviderForm({ providerDetails, handleSubmit, btnText }) {
 
     function cancel(){
         window.location.href='/providers'
-    }
-
-    const [active, setActive] = useState([''])
-
-    function setProviderActive(){
-        setActive(!active)
-        console.log(active)
     }
     
     return(
@@ -75,13 +82,28 @@ function ProviderForm({ providerDetails, handleSubmit, btnText }) {
 
                     <div class="div-active">
                         <label class="active-form">on
-                            <input class="active-modal" type="radio" name="active" id="on" value="on" onChange={() => setProviderActive()} checked={!active}>
-                            </input>
+                            <input 
+                                class="active-modal" 
+                                type="radio" 
+                                name="isActive" 
+                                id="on" 
+                                value="on" 
+                                checked={active === "on"}
+                                onChange={handleChange}
+                            ></input>
                             <span class="checkmark"></span>
                         </label>
 
                         <label class="active-form">off
-                            <input class="active-modal" type="radio" name="active" id="off" value="off" onChange={() => setProviderActive()} checked={active}></input>
+                            <input 
+                                class="active-modal" 
+                                type="radio" 
+                                name="isActive" 
+                                id="off" 
+                                value="off" 
+                                checked={active === "off"}
+                                onChange={handleChange}
+                            ></input>
                             <span class="checkmark"></span>
                         </label>
                     </div>

@@ -23,7 +23,6 @@ function Footer(){
                     <h2>Get Help</h2>
                     <li><Link to="/contact">Contact</Link></li>
                     <li><Link to="/order">Order</Link></li>
-                    <li><Link to="/providers">Providers</Link></li>
                 </div>
                 <div className={styles.payment}>
                     <h2>Payment</h2>

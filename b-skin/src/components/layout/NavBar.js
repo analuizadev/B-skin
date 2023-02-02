@@ -40,8 +40,8 @@ function NavBar(){
 
                                     <div class="menu">
                                         <li><Link to="/">Home</Link></li>
-                                        <li><Link to="/news">News</Link></li>
                                         <li><Link to="/shirt">Shirt</Link></li>
+                                        <li><Link to="/providers">Providers</Link></li>
                                         <li class="bagMobile"><Link to="/bag">Bag</Link></li>
                                     </div>
                                 </div> 
