@@ -1,4 +1,3 @@
-import EditModal from '../others/EditModal';
 import Table from '../services/Table';
 import Container from '../layout/Container';
 
@@ -9,8 +8,6 @@ function Providers() {
       <Container>
         
       <Table />
-      
-      <EditModal />
 
       </Container>
       
