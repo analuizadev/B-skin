@@ -2,10 +2,15 @@ import { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import ProviderForm from "../services/ProviderForm";
 import styles from  './EditProvide.css';
+import Message from "../services/Message";
 
 function EditProvide(){
 
     const [providerDetails, setProviderDetails] = useState([])
+
+    const [message, setMessage] = useState('')
+    const [type, setType] = useState()
+
 
     const param = useParams()
 
@@ -39,11 +44,17 @@ function EditProvide(){
             setProviderDetails(data)
         }).catch((err) => console.log(err))
 
+        setMessage('Successfully modified provider')
+        setType('sucess')
+        
         window.location.href='/providers'
     }
 
     return(
         <>
+            
+            {message && <Message type={type} msg={message}/>}
+
             {providerDetails.name ? (
                 <div id="body">
                     <div class="edit-body">

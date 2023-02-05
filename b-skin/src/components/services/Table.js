@@ -3,19 +3,16 @@ import styles from './Table.module.css';
 import {RxPencil1} from 'react-icons/rx';
 import {TiDeleteOutline} from 'react-icons/ti';
 
-import EditModal from '../others/EditModal';
-import { useState, useEffect, useCallback } from 'react';
+import Modal from '../others/Modal';
+import { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-
-import Message from './Message';
 
 
 function Table(){
 
-    const [type, setType] = useState()
-    const [message, setMessage] = useState('')
-    const [resp, setResp] = useState(false)
     const [provider, setProvider] = useState([])
+
+    const [open, setOpen] = useState(false)
 
     function providerList() {
         fetch('https://localhost:5001/providers/list', {
@@ -27,29 +24,24 @@ function Table(){
         })
     }
 
-    const deleteProvider = useCallback((id) => {
-        fetch(`https://localhost:5001/providers/exclude/${id}`, { method: 'DELETE' })
-            .then(resp => resp.json)
-            .then((data) => {
-                setResp(!resp)
-                setMessage('Success deleted provider!')
-                setType('sucess')
-            })
-    }, [resp])
-
     useEffect(() =>{
         providerList();
-    }, [deleteProvider])
+    })
 
     function details(id) {
         window.location.href=`providers/details/${id}`
     }
 
+    const [idProvi, setId] = useState(0)
+
+    function qualquer(id){
+        setOpen(true)
+        setId(id)
+    }
+
 
     return(
         <>
-
-           {message && <Message type={type} msg={message}/>}
 
             <div className={styles.table}>
 
@@ -82,7 +74,7 @@ function Table(){
                                             ) : <td className={styles.off}></td>}
                                             <td>
                                             <button><Link to={`/providers/update/${providers.id}`}><RxPencil1 /></Link></button> <span>
-                                                <button onClick={() => deleteProvider(providers.id)}><TiDeleteOutline /></button></span>
+                                                <button onClick={() => qualquer(providers.id)}><TiDeleteOutline /></button></span>
                                             </td>
                                         </tr>
                                     )
@@ -95,6 +87,7 @@ function Table(){
             </table>
 
             </div>
+            {open && <Modal openModal={setOpen} idProv={idProvi} />}
         </>
     )
 }
