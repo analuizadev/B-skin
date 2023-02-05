@@ -1,25 +1,16 @@
 import styles from './Modal.css';
-import { useState, useEffect, useCallback } from 'react';
-
-import Message from '../services/Message';
 
 function Modal({ openModal, idProv }){
 
-    const [type, setType] = useState()
-    const [message, setMessage] = useState('')
-    const [resp, setResp] = useState(false)
-    const [provider, setProvider] = useState([])
-
-  const deleteProvider = useCallback((id) => {
+  const deleteProvider = (id) => {
 
       fetch(`https://localhost:5001/providers/exclude/${id}`, { method: 'DELETE' })
           .then(resp => resp.json)
           .then((data) => {
               openModal(false)
-              setMessage('Success deleted provider!')
-              setType('sucess')
           })
-  }, [])
+          
+  }
 
     return(
       <>

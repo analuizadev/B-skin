@@ -4,15 +4,12 @@ import {RxPencil1} from 'react-icons/rx';
 import {TiDeleteOutline} from 'react-icons/ti';
 
 import Modal from '../others/Modal';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
 
 function Table(){
 
-    const [type, setType] = useState()
-    const [message, setMessage] = useState('')
-    const [resp, setResp] = useState(false)
     const [provider, setProvider] = useState([])
 
     const [open, setOpen] = useState(false)
