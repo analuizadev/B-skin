@@ -8,7 +8,7 @@ import styles from "./NavBar.css";
 
 import Container from './Container';
 import Search from '../services/Search';
-import Order from '../services/Order';
+import Order from '../pages/Order';
 
 function NavBar(){
 
