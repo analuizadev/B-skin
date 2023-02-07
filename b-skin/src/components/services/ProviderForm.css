@@ -28,37 +28,9 @@
 .active-form{
     height: 30px;
     width: 50px;
+    margin-left: 10px;
 }
 
-.on,
-.off{
-    position: relative;
-    display: inline;
-    margin-left: 7px;
-}
-
-.on:before{
-    top: 10%;
-    width: 13px;
-    height: 13px;
-    background: #54c63aab;
-    border-radius: 9px;
-    position: absolute;
-    content: "";
-    margin: 0 auto;
-    animation: on-pulse 2s linear infinite;
-}
-
-.on:after{
-    top: 10%;
-    width: 13px;
-    height: 13px;
-    background: #54c63a;
-    border-radius: 9px;
-    position: absolute;
-    content: "";
-    margin: 0 auto;
-}
 
 @keyframes on-pulse{
     0%{

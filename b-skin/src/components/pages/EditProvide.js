@@ -2,7 +2,7 @@ import { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import ProviderForm from "../services/ProviderForm";
 import styles from  './EditProvide.css';
-import Message from "../services/Message";
+import Message from "../others/Message";
 
 function EditProvide(){
 

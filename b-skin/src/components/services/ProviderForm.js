@@ -81,7 +81,7 @@ function ProviderForm({ providerDetails, handleSubmit, btnText }) {
                     
 
                     <div class="div-active">
-                        <label class="active-form on">
+                        <label class="active-form">on
                             <input 
                                 class="active-modal" 
                                 type="radio" 
@@ -94,7 +94,7 @@ function ProviderForm({ providerDetails, handleSubmit, btnText }) {
                             <span class="checkmark"></span>
                         </label>
 
-                        <label class="active-form off">
+                        <label class="active-form">off
                             <input 
                                 class="active-modal" 
                                 type="radio" 

@@ -15,8 +15,8 @@ import Shirt from './components/pages/Shirt';
 import ShopPage from './components/pages/ShopPage';
 import Providers from './components/pages/Providers';
 import ProviderDetails from './components/pages/ProviderDetails';
-import Contact from './components/services/Contact';
-import Order from './components/services/Order';
+import Contact from './components/pages/Contact';
+import Order from './components/pages/Order';
 import Bag from './components/pages/Bag';
 import EditProvide from './components/pages/EditProvide';
 
