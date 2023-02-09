@@ -73,8 +73,11 @@
     padding-left: 10px;
 }
 
-.bag{
-    padding-top: 0;
+.navbar_list .bag-order li{
+    padding: 0;
+}
+
+.bag-order{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -84,17 +87,17 @@
     list-style: none;
 }
 
-.bag li{
+.bag-order li{
     cursor: pointer;
     padding-right: 10px;
 }
 
-.bag li svg{
+.bag-order li svg{
     font-size: 25px;
     color: #0e4e96;
 }
 
-.bag svg:hover{
+.bag-order svg:hover{
     color: #0e4d96b2;
 }
 
@@ -127,7 +130,7 @@
         padding-top: 0;
     }
 
-    .bag li{
+    .bag-order li{
         padding-top: 0;
     }
 
@@ -208,7 +211,7 @@
         transform: rotate(-45deg) translate(5px,-6px);
     }
     
-    .bag{
+    .bag-order{
         display: none;
     }
 

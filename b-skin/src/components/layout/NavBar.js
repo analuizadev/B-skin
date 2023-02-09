@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom';
-import { BsFillPersonFill } from "react-icons/bs";
 import { BsBasket3 } from "react-icons/bs";
 
 import { useState } from 'react';
@@ -47,7 +46,7 @@ function NavBar(){
                                 </div> 
 
                                 <div class="flex_contact">
-                                    <div class="bag">
+                                    <div class="bag-order">
                                         <li onClick={() => {setModalOpen(true)}}><BsBasket3 /></li>
                                     </div>
                                 </div> 
