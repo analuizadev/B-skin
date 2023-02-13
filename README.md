@@ -9,19 +9,19 @@
 <div>
   <div align="center">
     <h3>Home Page</h3>
-    <img style="width: 450px" src="https://media.discordapp.net/attachments/1015469538738970636/1074730892892835850/homepage.png">
-    <img style="width: 450px" src="https://media.discordapp.net/attachments/1015469538738970636/1074730924203315241/homepage2.png">
+    <img src="https://media.discordapp.net/attachments/1015469538738970636/1074730892892835850/homepage.png">
+    <img src="https://media.discordapp.net/attachments/1015469538738970636/1074730924203315241/homepage2.png">
   </div>
   
   <div align="center">
     <h3>Shirt Page</h3>
-    <img style="width: 600px" src="https://media.discordapp.net/attachments/1015469538738970636/1074831229343506462/image.png">
+    <img src="https://media.discordapp.net/attachments/1015469538738970636/1074831229343506462/image.png">
   </div>
   
   <div align="center">
     <h3>Contact Page</h3>
-    <img style="width: 450px" src="https://media.discordapp.net/attachments/1015469538738970636/1074733895406338088/contactpage.png">
-    <img style="width: 450px" src="https://media.discordapp.net/attachments/1015469538738970636/1074734445975847003/contactfooter.png">
+    <img src="https://media.discordapp.net/attachments/1015469538738970636/1074733895406338088/contactpage.png">
+    <img src="https://media.discordapp.net/attachments/1015469538738970636/1074734445975847003/contactfooter.png">
   </div>
   
   <div align="center">
@@ -31,8 +31,8 @@
   
   <div align="center">
     <h3>Dark mode</h3>
-    <img style="width: 450px" src="https://media.discordapp.net/attachments/1015469538738970636/1074832922298826853/image.png">
-    <img style="width: 450px" src="https://media.discordapp.net/attachments/1015469538738970636/1074833033871499364/image.png">
+    <img src="https://media.discordapp.net/attachments/1015469538738970636/1074832922298826853/image.png">
+    <img src="https://media.discordapp.net/attachments/1015469538738970636/1074833033871499364/image.png">
   </div>
   
   <div align="center">
