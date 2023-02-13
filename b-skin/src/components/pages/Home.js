@@ -29,6 +29,7 @@ function Home(){
                             <div class="card-footer">
                                 <select>
                                     <option disabled>Select a option</option>
+                                    <option value="small" selected>XS</option>
                                     <option value="small" selected>S</option>
                                     <option value="medium">M</option>
                                     <option value="large">L</option>

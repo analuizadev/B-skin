@@ -20,6 +20,7 @@
 }
 
 .help div ul{
+    padding: 2em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -81,6 +82,10 @@
     color: rgb(154, 153, 153);
 }
 
+.head p{
+    margin-top: 1em;
+}
+
 .contact-body{
     padding-top: 1em;
     width: 60%;
@@ -105,7 +110,6 @@
 
 .contact-body li h2{
     font-size: 15px;
-    margin-top: -23px;
 }
 
 .contact-body li svg{
