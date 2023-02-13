@@ -1,0 +1,138 @@
+.shirt-body{
+    width: 100%;
+}
+
+.shirt-container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.shirt-container header{
+    display: flex;
+    padding: 1em 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shirt-container header select{
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    color: #0e4e96;
+    border-color: #0e4d9671;
+    cursor: pointer;
+}
+
+.shirt-container header select:focus{
+    outline-color: #5784b7;
+}
+
+.shirt-container header h3{
+    color: #0e4e96;
+    font-size: 14px;
+}
+
+.shirt-container article{
+    display: flex;
+}
+
+.shirt-container aside{
+    height: 30%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.shirt-container aside ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.shirt-container aside li header{
+    padding: 10px 0px;
+    border-top: 1px solid #0e4d9671;
+}
+
+.shirt-container aside li h3{
+    color: #0e4e96;
+    font-size: 14px;
+}
+
+.shirt-container aside .nav-filter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 1em;
+}
+
+.nav-filter label{
+    color: #0e4e96;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+.nav-filter label input[type="checkbox"]{
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    border: 1px solid rgb(154, 153, 153);
+    border-radius: 3px;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+
+.nav-filter label input[type="checkbox"]::before{
+    content: "";
+    width: 0.65em;
+    height: 0.60em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #0e4e96;
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.nav-filter label input[type="checkbox"]:checked::before{
+    transform: scale(1);
+}
+
+.shirt-container article section{
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    gap: 5em 1em;
+    justify-items: center;
+}
+
+.shirt-container section .grid-item{
+    cursor: pointer;
+    width: 255px;
+    height: 350px;
+}
+
+.grid-item img{
+    width: 250px;
+    height: 280px;
+}
+
+.grid-item h3{
+    color: #0e4e96;
+    font-size: 13px;
+    margin-top: .5em;
+    margin-bottom: 0px;
+}
+
+.grid-item p{
+    margin-bottom: .5em;
+    color: rgb(154, 153, 153);
+}
+
+.grid-item span{
+    color: rgb(0, 173, 29);
+}
+
