@@ -1,7 +1,8 @@
-## B-SKIN
+<h1 >B-SKIN</h1>
 
 <div>
   <p>B-SKIN is an e-commerce made for sellers and customers. A simple website selling t-shirts, which has a home page with a carrousel featuring some t-shirts. A page with a grid of shirts and a filter to facilitate the search. A provider table, where you can change their information and track who is active or inactive. A contact page, with a get help with the main questions and email/telephone number for contact. A page with the order's informations. And, to finish, this site is responsive and has dark and light modes. I hope you enjoy this project.</p>
+  <img src="http://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=GREEN&style=for-the-badge"/>
 </div>
 
 #
