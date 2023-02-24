@@ -1,7 +1,18 @@
 import styles from './Shirt.css';
 import { BsFilter } from 'react-icons/bs';
+import { useEffect, useState } from 'react';
+import ShirtFetch from '../others/ShirtFetch';
+import { usePagination } from 'react-table';
 
 function Shirt(){
+
+    const { tshirt, fetchData } = ShirtFetch(9)
+
+    const { actualPage, setActualPage } = usePagination()
+
+    useEffect(() =>{
+        fetchData()
+    }, [actualPage])
 
     return(
         <div class="shirt-body">
@@ -94,79 +105,31 @@ function Shirt(){
                             </li>
                         </ul>
                     </aside>
-                    <section>
-                        <div class="grid-item">
-                            <img src="https://media.discordapp.net/attachments/1062864750196822026/1062867730451153007/1.png"
-                            alt="Black Batman T-shirt" />
-                            <h3>Batman T-shirt</h3>
-                            <p>Renner</p>
-                            <span>$10</span>
+                    <div class="pag-style">
+                        <section>
+                            {tshirt.map(shirt =>{
+                                return(
+                                    <div class="grid-item" key={shirt.id}>
+                                        <img src={shirt.imageUrl}
+                                        alt="Black Batman T-shirt" />
+                                        <h3>{shirt.modelName}</h3>
+                                        <p>{shirt.brand}</p>
+                                        <span>${shirt.price}</span>
+                                    </div>
+                                )
+                            })}
+                        </section>
+                        <div class="pag">
+                            {
+                                Array(5).fill('').map((_, index) => {
+                                    return <button key={index} onClick={() => setActualPage(index + 1)}>
+                                        {index + 1}
+                                    </button>
+                                })
+                            }
                         </div>
-
-                        <div class="grid-item">
-                            <img src="https://media.discordapp.net/attachments/1062864750196822026/1062867732229521498/6.png"
-                            alt="Blue active shirt" />
-                            <h3>Blue active shirt</h3>
-                            <p>C&A</p>
-                            <span>$15</span>
-                        </div>
-
-                        <div class="grid-item">
-                            <img src="https://media.discordapp.net/attachments/1062864750196822026/1062867730778312725/2.png?"
-                            alt="Blue spider-man t-shirt" />
-                            <h3>Blue spider-man t-shirt</h3>
-                            <p>Renner</p>
-                            <span>$10</span>
-                        </div>
-
-                        <div class="grid-item">
-                            <img src="https://media.discordapp.net/attachments/1062864750196822026/1062867731130613850/3.png"
-                            alt="Kids sponge bob shirt" />
-                            <h3>Kids sponge bob shirt</h3>
-                            <p>Renner</p>
-                            <span>$12</span>
-                        </div>
-
-                        <div class="grid-item">
-                            <img src="https://media.discordapp.net/attachments/1062864750196822026/1062867731474563172/4.png"
-                            alt="Sponge bob lilac shirt" />
-                            <h3>Sponge bob lilac shirt</h3>
-                            <p>Renner</p>
-                            <span>$10</span>
-                        </div>
-
-                        <div class="grid-item">
-                            <img src="https://media.discordapp.net/attachments/1062864750196822026/1062867731864637500/5.png"
-                            alt="Looney Tunes t-shirt" />
-                            <h3>Looney Tunes t-shirt</h3>
-                            <p>Renner</p>
-                            <span>$12</span>
-                        </div>
-
-                        <div class="grid-item">
-                            <img src="https://media.discordapp.net/attachments/1062864750196822026/1062867732636385430/7.png"
-                            alt="Black basic tank" />
-                            <h3>Black basic tank</h3>
-                            <p>C&A</p>
-                            <span>$10</span>
-                        </div>
-
-                        <div class="grid-item">
-                            <img src="https://media.discordapp.net/attachments/1062864750196822026/1062867733039042561/8.png"
-                            alt="White basic shirt" />
-                            <h3>White basic shirt</h3>
-                            <p>C&A</p>
-                            <span>$10</span>
-                        </div>
-
-                        <div class="grid-item">
-                            <img src="https://media.discordapp.net/attachments/1062864750196822026/1062867733324234822/9.png"
-                            alt="Red basic shirt" />
-                            <h3>Red basic shirt</h3>
-                            <p>C&A</p>
-                            <span>$10</span>
-                        </div>
-                    </section>
+                    </div>
+                    
                 </article>
                 
             </div>

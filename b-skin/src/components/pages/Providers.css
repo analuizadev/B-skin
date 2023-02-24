@@ -1,0 +1,11 @@
+.provi-body{
+    width: 100%;
+    margin-top: 1em;
+}
+
+.provi-body h2{
+    margin: 0 auto;
+    font-size: 30px;
+    color: #0e4e96;
+    font-weight: bold;
+}
