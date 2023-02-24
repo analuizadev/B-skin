@@ -46,7 +46,6 @@ function Table(){
             <div className={styles.table}>
 
             <table id="providersTb">
-                <caption>Providers</caption>
 
                 <div className={styles.radius}>
                     <thead>

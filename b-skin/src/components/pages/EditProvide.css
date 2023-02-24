@@ -127,6 +127,20 @@
     background-color: white;
 }
 
+.invalid{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+}
+
+.invalid p{
+    font-size: 23px;
+    margin: 0 auto;
+    color: #0e4e96;
+}
+
 @media (max-width: 960px){
     .edit-body form input,
     .edit-body form textarea{

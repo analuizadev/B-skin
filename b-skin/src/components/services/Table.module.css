@@ -16,13 +16,6 @@
     border-radius: 2.5%;
 }
 
-.table caption{
-    margin-bottom: 1em;
-    font-size: 30px;
-    color: #0e4e96;
-    font-weight: bold;
-}
-
 .table thead{
     width: 100%;
     background-color: #0e4e96;
@@ -61,15 +54,14 @@
 .scroll svg{
     font-size: 19px;
     color: #0e4e96;
+    margin-bottom: 6px;
 }
 
 .scroll button{
-    margin-top: 3px;
-    padding: 6px;
+    padding: 0px 6px;
     height: 30px;
     width: 30px;
     border: none;
-    text-align: center;
     cursor: pointer;
     background-color: transparent;
 }

@@ -19,17 +19,21 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #036ee855;
+    align-items: center;
 }
 
 .modal-container header h2{
     color: #0e4e96;
+    font-size: 20px;
 }
 
 .modal-container header button{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-    height: 35px;
+    height: 34px;
     width: 35px;
+    padding: 0px;
+    margin-bottom: 5px;
 }
 
 .modal-container header button:hover{
@@ -54,7 +58,8 @@
     background-color: #0e4e96;
     color: white;
     padding: 10px 25px;
-    font-size: 15px;
+    font-size: 13px;
+    margin-right: 5px;
     border-radius: 20px;
     transition: .3s;
 }

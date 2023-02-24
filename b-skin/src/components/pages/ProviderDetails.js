@@ -60,7 +60,9 @@ function ProviderDetails (){
                     
                 </div>
             ) : (
-                <p>Invalid provider</p>
+                <div className={styles.invalid}>
+                    <p>Invalid provider</p>
+                </div>
             )}
         </>
     )
