@@ -100,13 +100,21 @@
     transform: scale(1);
 }
 
-.shirt-container article section{
-    width: 70%;
+.shirt-container .pag-style{
+    border: 1px solid purple;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shirt-container article section{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0px, 1fr));
     gap: 5em 1em;
     justify-items: center;
+    border: 1px solid red;
 }
 
 .shirt-container section .grid-item{

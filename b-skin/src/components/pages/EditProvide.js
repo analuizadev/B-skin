@@ -11,10 +11,7 @@ function EditProvide(){
     const [message, setMessage] = useState('')
     const [type, setType] = useState()
 
-
     const param = useParams()
-
-    console.log(providerDetails.id)
 
     function providerInfo(){
         setTimeout(() =>{
@@ -46,8 +43,6 @@ function EditProvide(){
 
         setMessage('Successfully modified provider')
         setType('sucess')
-        
-        window.location.href='/providers'
     }
 
     return(
@@ -70,7 +65,9 @@ function EditProvide(){
                     </div>
                 </div>
             ): (
-                <p>Invalid provider</p>
+                <div class="invalid">
+                    <p>Invalid provider</p>
+                </div>
             )}
         </>
     )

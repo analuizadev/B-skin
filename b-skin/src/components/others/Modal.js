@@ -19,7 +19,7 @@ function Modal({ openModal, idProv }){
           <div class="modal-container">
             <header>
               <h2>Delete Provider</h2>
-              <button onClick={() => openModal(false)}> x </button>
+              <button onClick={() => openModal(false)}>x</button>
             </header>
             <section class="body">
               <p>Are you sure you want to delete the provider?</p>
