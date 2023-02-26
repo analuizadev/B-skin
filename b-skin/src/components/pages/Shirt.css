@@ -101,11 +101,11 @@
 }
 
 .shirt-container .pag-style{
-    border: 1px solid purple;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 190vh;
 }
 
 .shirt-container article section{
@@ -114,7 +114,6 @@
     grid-template-columns: repeat(3, minmax(0px, 1fr));
     gap: 5em 1em;
     justify-items: center;
-    border: 1px solid red;
 }
 
 .shirt-container section .grid-item{
@@ -144,3 +143,40 @@
     color: rgb(0, 173, 29);
 }
 
+.pag{
+    border-radius: 10px;
+    border: 1px solid #76aae671;
+    margin-top: 5em;
+    display: flex;
+}
+
+.pag .pagi{
+    padding: 8px 15px;
+}
+
+.pag .pagi:hover,
+.pag .seta:hover{
+    background-color: #96c1f357;
+}
+
+.pag .seta{  
+   padding: 8px 0px;
+}
+
+.pag .seta div{
+    cursor: pointer;
+}
+
+.pag .seta .right{
+    border-right: 1px solid #76aae671;
+    padding: 2px 10px;
+}
+
+.pag .seta .left{
+    border-left: 1px solid #76aae671;
+    padding: 2px 10px;
+}
+
+.pag div svg{
+    color: #0e4e96;
+}

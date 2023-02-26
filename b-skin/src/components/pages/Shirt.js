@@ -1,18 +1,40 @@
 import styles from './Shirt.css';
 import { BsFilter } from 'react-icons/bs';
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import { useEffect, useState } from 'react';
-import ShirtFetch from '../others/ShirtFetch';
-import { usePagination } from 'react-table';
 
 function Shirt(){
 
-    const { tshirt, fetchData } = ShirtFetch(9)
+    const [shirts, setShirts] = useState([])
+    const [shirtsPerPage, setShirtsPerPage] = useState(9)
+    const [currentPage, setCurrentPage] = useState(0)
 
-    const { actualPage, setActualPage } = usePagination()
+    const pages = Math.ceil(shirts.length / shirtsPerPage)
+    const startIndex = currentPage * shirtsPerPage;
+    const endIndex = startIndex + shirtsPerPage;
+    const currentShirts = shirts.slice(startIndex, endIndex)
 
     useEffect(() =>{
+        const fetchData = async () => {
+            const result = await fetch(`https://localhost:5001/t-shirts/list`, {
+                method: 'POST',
+                headers:{ 'Content-Type' : 'application/json' },
+                body: JSON.stringify({
+                    pagination:{
+                        page: 1,
+                        pageSize: 1,
+                        ignorePagination: true
+                    }, 
+                    filters: null
+                })
+            })
+            .then((resp) => resp.json())
+            .then((data) => data)
+
+            setShirts(result)
+        }
         fetchData()
-    }, [actualPage])
+    }, [])
 
     return(
         <div class="shirt-body">
@@ -107,7 +129,7 @@ function Shirt(){
                     </aside>
                     <div class="pag-style">
                         <section>
-                            {tshirt.map(shirt =>{
+                            {currentShirts.map(shirt =>{
                                 return(
                                     <div class="grid-item" key={shirt.id}>
                                         <img src={shirt.imageUrl}
@@ -120,13 +142,15 @@ function Shirt(){
                             })}
                         </section>
                         <div class="pag">
-                            {
-                                Array(5).fill('').map((_, index) => {
-                                    return <button key={index} onClick={() => setActualPage(index + 1)}>
-                                        {index + 1}
-                                    </button>
-                                })
-                            }
+                            <div class="seta">
+                                <div class="right"><AiOutlineLeft /></div>
+                            </div>
+                            {Array.from(Array(pages), (shirt, index) => {
+                                return (<button class="pagi" value={index} onClick={(e) => setCurrentPage(Number(e.target.value))}>{index + 1}</button>)
+                            })}
+                            <div class="seta">
+                                <div class="left"><AiOutlineRight /></div>
+                            </div>
                         </div>
                     </div>
                     
