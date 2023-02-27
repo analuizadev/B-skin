@@ -36,11 +36,14 @@ function Shirt(){
         fetchData()
     }, [])
 
+    const [active, setActive] = useState(false)
+    const click = () => setActive(!active)
+
     return(
         <div class="shirt-body">
             <div class="shirt-container">
                 <header>
-                    <h3>Filters <BsFilter /></h3>
+                    <h3 onClick={click}>Filters <BsFilter /></h3>
                     <select>
                         <option disabled> Sort By </option>
                         <option value="high">High price</option>
@@ -49,7 +52,7 @@ function Shirt(){
                 </header>
 
                 <article>
-                    <aside>
+                    <aside class={`filter ${active ? "active" : "inactive"}`}>
                         <ul>
                             <li>
                                 <header>
@@ -128,7 +131,7 @@ function Shirt(){
                         </ul>
                     </aside>
                     <div class="pag-style">
-                        <section>
+                        <section class="grid">
                             {currentShirts.map(shirt =>{
                                 return(
                                     <div class="grid-item" key={shirt.id}>
@@ -143,13 +146,13 @@ function Shirt(){
                         </section>
                         <div class="pag">
                             <div class="seta">
-                                <div class="right"><AiOutlineLeft /></div>
+                                <div class="right" onClick={() => setCurrentPage(currentPage - 1)}><AiOutlineLeft /></div>
                             </div>
                             {Array.from(Array(pages), (shirt, index) => {
                                 return (<button class="pagi" value={index} onClick={(e) => setCurrentPage(Number(e.target.value))}>{index + 1}</button>)
                             })}
                             <div class="seta">
-                                <div class="left"><AiOutlineRight /></div>
+                                <div class="left" onClick={() => setCurrentPage(currentPage + 1)}><AiOutlineRight /></div>
                             </div>
                         </div>
                     </div>
