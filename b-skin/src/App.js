@@ -19,6 +19,7 @@ import Contact from './components/pages/Contact';
 import Order from './components/pages/Order';
 import Bag from './components/pages/Bag';
 import EditProvide from './components/pages/EditProvide';
+import ShirtDetails from './components/pages/ShirtDetails';
 
 
 import NavBar from './components/layout/NavBar';
@@ -76,6 +77,7 @@ function App() {
               <Route path="/order" element={<Order />}></Route>
               <Route path="/contact" element={<Contact />}></Route>
               <Route path="/bag" element={<Bag />}></Route>
+              <Route path="t-shirts/details/:id" element={<ShirtDetails />}></Route>
               <Route path="providers/update/:id" element={<EditProvide />}></Route>
               <Route path="providers/details/:id" element={<ProviderDetails />}></Route>
             </Routes>
