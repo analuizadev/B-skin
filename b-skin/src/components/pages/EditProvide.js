@@ -20,7 +20,6 @@ function EditProvide(){
             }).then((resp) => resp.json())
             .then((data) =>{
                 setProviderDetails(data)
-                console.log(data)
             })
         })
     }
@@ -31,18 +30,18 @@ function EditProvide(){
 
     function editProvi(providerDetails) {
         fetch(`https://localhost:5001/providers/update/${providerDetails.id}`,{
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(providerDetails)
-        }).then((resp) => resp.json())
-        .then((data) =>{
-            setProviderDetails(data)
-        }).catch((err) => console.log(err))
-
-        setMessage('Successfully modified provider')
-        setType('sucess')
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(providerDetails)
+            }).then((resp) => resp.json())
+            .then((data) => {
+                setProviderDetails(data)
+            })
+            .catch((err) => console.log(err))
+        
+        //window.location.href='/providers'
     }
 
     return(
@@ -50,7 +49,7 @@ function EditProvide(){
             
             {message && <Message type={type} msg={message}/>}
 
-            {providerDetails.name ? (
+            {providerDetails.id ? (
                 <div id="body">
                     <div class="edit-body">
                         <header>

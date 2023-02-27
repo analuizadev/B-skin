@@ -1,9 +1,39 @@
 import styles from './Home.css';
 import CarouselHome from '../others/CarouselHome';
 import { IoAirplaneOutline } from 'react-icons/io5';
-import { BsBoxSeam } from 'react-icons/bs'
+import { BsBoxSeam } from 'react-icons/bs';
+import { useEffect, useState } from 'react';
+import CardHome from '../others/CardHome';
 
 function Home(){
+
+    const [shirts, setShirts] = useState([])
+
+    useEffect(() =>{
+        const fetchData = async () => {
+            const result = await fetch(`https://localhost:5001/t-shirts/list`, {
+                method: 'POST',
+                headers:{ 'Content-Type' : 'application/json' },
+                body: JSON.stringify({
+                    pagination:{
+                        page: 9,
+                        pageSize: 3,
+                        ignorePagination: false
+                    }, 
+                    filters: null
+                })
+            })
+            .then((resp) => resp.json())
+            .then((data) => data)
+
+            setShirts(result)
+        }
+        fetchData()
+    }, [])
+
+    function shirtDetails(id){
+        window.location.href=`t-shirts/details/${id}`
+    }
 
     return(
         <div className="home_container">
@@ -21,39 +51,7 @@ function Home(){
                     </header>
                     
                     <div class="card-flex">
-                        <div class="card-header">
-                            <img 
-                            src="https://media.discordapp.net/attachments/1062864750196822026/1062867730451153007/1.png" 
-                            alt="batman t-shirt"/>
-                            <p>batman shirt<span>$15,00</span></p>
-                            <div class="card-footer">
-                                <select>
-                                    <option disabled>Select a option</option>
-                                    <option value="small" selected>XS</option>
-                                    <option value="small" selected>S</option>
-                                    <option value="medium">M</option>
-                                    <option value="large">L</option>
-                                    <option value="xlarge">XL</option>
-                                </select>
-                                <button>buy</button>
-                            </div>
-                        </div>
-                        <div class="card-header">
-                            <img 
-                            src="https://media.discordapp.net/attachments/1062864750196822026/1062868968282525728/38.png" 
-                            alt="louis vuitton t-shirt"/>
-                            <p>louis vuitton  shirt<span>$30,00</span></p>
-                            <div class="card-footer">
-                                <select>
-                                    <option disabled>Select a option</option>
-                                    <option value="small" selected>S</option>
-                                    <option value="medium">M</option>
-                                    <option value="large">L</option>
-                                    <option value="xlarge">XL</option>
-                                </select>
-                                <button>buy</button>
-                            </div>
-                        </div>
+                        <CardHome />
                     </div>
 
                 </div>
@@ -74,56 +72,26 @@ function Home(){
             </article>
 
             <section class="new-in">
-                <div class="card">
-                    <img 
-                    src="https://media.discordapp.net/attachments/1062864750196822026/1062868949861142558/35.png" 
-                    alt="nike t-shirt"/>
-                    <p>nike basic t-shirt <span>$20,00</span></p>
-                    <div class="end">
-                        <select>
-                            <option disabled>Select a option</option>
-                            <option value="small" selected>S</option>
-                            <option value="medium">M</option>
-                            <option value="large">L</option>
-                            <option value="xlarge">XL</option>
-                        </select>
-                        <button>buy</button>
+                {shirts.map(shirt =>{
+                    return(
+                    <div class="card">
+                        <img 
+                        src={shirt.imageUrl} 
+                        alt={shirt.modelDescription}/>
+                        <p>{shirt.modelName}<span>${shirt.price}</span></p>
+                        <div class="end">
+                            <select>
+                                <option disabled>Select a option</option>
+                                <option value="small" selected>S</option>
+                                <option value="medium">M</option>
+                                <option value="large">L</option>
+                                <option value="xlarge">XL</option>
+                            </select>
+                            <button onClick={() => shirtDetails(shirt.id)}>buy</button>
+                        </div>
                     </div>
-                </div>
-
-                <div class="card">
-                    <img 
-                    src="https://media.discordapp.net/attachments/1062864750196822026/1062868947654934558/30.png" 
-                    alt="rap t-shirt"/>
-                    <p>drip t-shirt  <span>$25,00</span></p>
-                    <div class="end">
-                        <select>
-                            <option disabled>Select a option</option>
-                            <option value="small" selected>S</option>
-                            <option value="medium">M</option>
-                            <option value="large">L</option>
-                            <option value="xlarge">XL</option>
-                        </select>
-                        <button>buy</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img 
-                    src="https://media.discordapp.net/attachments/1062864750196822026/1062868737314787428/13.png" 
-                    alt="white t-shirt"/>
-                    <p>basic t-shirt <span>$10,00</span></p>
-                    <div class="end">
-                        <select>
-                            <option disabled>Select a option</option>
-                            <option value="small" selected>S</option>
-                            <option value="medium">M</option>
-                            <option value="large">L</option>
-                            <option value="xlarge">XL</option>
-                        </select>
-                        <button>buy</button>
-                    </div>
-                </div>
+                    )
+                })}
             </section>
             
         </div>
