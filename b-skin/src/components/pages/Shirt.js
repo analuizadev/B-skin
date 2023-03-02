@@ -39,6 +39,10 @@ function Shirt(){
     const [active, setActive] = useState(false)
     const click = () => setActive(!active)
 
+    function shirtDetails(id){
+        window.location.href=`t-shirts/details/${id}`
+    }
+
     return(
         <div class="shirt-body">
             <div class="shirt-container">
@@ -134,7 +138,7 @@ function Shirt(){
                         <section class="grid">
                             {currentShirts.map(shirt =>{
                                 return(
-                                    <div class="grid-item" key={shirt.id}>
+                                    <div onClick={() => shirtDetails(shirt.id)} class="grid-item" key={shirt.id}>
                                         <img src={shirt.imageUrl}
                                         alt="Black Batman T-shirt" />
                                         <h3>{shirt.modelName}</h3>

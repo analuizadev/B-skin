@@ -29,7 +29,7 @@
     margin-bottom: 0px;
 }
 
-.navbar_list p{
+.navbar_list .flex {
     font-size: 40px;
     text-transform: uppercase;
     margin-top: 0;
@@ -37,6 +37,10 @@
     text-align: center;
     margin-bottom: 15px;
     color: #0e4e96;
+}
+
+.navbar_list .flex img{
+    width: 230px;
 }
 
 .flex-mobile{
@@ -237,5 +241,9 @@
     .menu-section.on .menu li{
         margin: 3px auto;
         padding: 5px;
+    }
+
+    .navbar_list .flex img{
+        width: 180px;
     }
 }
