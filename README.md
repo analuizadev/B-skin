@@ -27,11 +27,11 @@
   <div align="center">
     <h3>Providers Page</h3>
     <img src="https://media.discordapp.net/attachments/1015469538738970636/1080662154786656376/image.png?width=1440&height=571">
-    <p>Providers table with short info and interactive buttons, edit/delete.</p>
+    <p>Providers table with short info and interactive buttons, edit/delete.</p><br />
     <img src="https://media.discordapp.net/attachments/1015469538738970636/1080662449361006653/image.png?width=1195&height=663">
-    <p>Page to edit provider informations.</p>
+    <p>Page to edit provider informations.</p><br /><br />
     <img src="https://media.discordapp.net/attachments/1015469538738970636/1080662260818657320/image.png">
-    <p>Modal to delete provider from table and database.</p>
+    <p>Modal to delete provider from table and database.</p><br />
     <img src="https://media.discordapp.net/attachments/1015469538738970636/1080662369786671234/image.png?width=1440&height=472">
     <p>Page of all details about a specific provider.</p>
   </div>
