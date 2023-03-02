@@ -1,15 +1,119 @@
 .shirt-details{
-    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+}
+
+.shirt-details .shirt-container{
     width: 90%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
 }
 
 .shirt-img{
-    border: 1px solid purple;
-    width: 300px;
-    height: 350px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
 }
 
 .shirt-img img{
-    width: 100%;
+    width: 80%;
+}
+
+.shirt-container .shirt-info{
+    margin-top: 4em;
+}
+
+.shirt-container .shirt-info header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.shirt-info header h2{
+    font-size: 16px;
+    font-weight: bold;
+    color: #0e4e96;
+}
+
+.shirt-info header h3{
+    color: rgb(0, 173, 29);
+}
+
+.shirt-info .size button{
+    padding: 10px;
+    margin-right: 10px;
+    transition: background .3s linear;
+}
+
+.shirt-info .size .more-pad{
+    padding: 10px 14px;
+}
+
+.shirt-info .size button:focus{
+    background: #0e4e96;
+    color: white;
+}
+
+.shirt-info footer {
+    display: flex;
+    justify-content: center;
+}
+
+.shirt-info footer .center{
+    margin-top: 1em;
+}
+
+.shirt-info footer .center button{
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: #0e4e96;
+    color: white;
+    font-size: 13px;
+    border-radius: 20px;
+    transition: .3s ease-out;
+}
+
+.shirt-info footer .center button:hover{
+    box-shadow: inset 200px 0 0 #0e4d9690;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #0e4e96;
+}
+
+@media (max-width:550px){
+
+    .shirt-details .shirt-container{
+        flex-direction: column;
+    }
+
+    .shirt-img{
+        width: 100%;
+    }
+
+    .shirt-container .shirt-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shirt-info footer .center{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .shirt-info footer .center button{
+        width: 90%;
+        height: 45px;
+        border: 1px solid;
+        transition: .3s ease-in;
+        background-color: transparent;
+        color: #0e4e96;
+    }
+
+    .shirt-info footer .center button:focus{
+        background: #0e4e96;
+        color: white;
+    }
+
 }

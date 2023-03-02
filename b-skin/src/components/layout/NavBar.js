@@ -25,7 +25,9 @@ function NavBar(){
                     <div class="container_nav">
                         <ul class="navbar_list">
                             <div class="flex">
-                                <p class="logo">B-Skin</p>
+                                <Link to="/">
+                                    <img alt="B-SKIN logo" src="https://cdn.discordapp.com/attachments/1015469538738970636/1080567173967261796/b-skinLogo.png" />
+                                </Link>
                             </div>
 
                             <div class="flex-mobile">
