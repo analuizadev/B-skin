@@ -29,17 +29,17 @@ function EditProvide(){
     }, [])
 
     function editProvi(providerDetails) {
-        fetch(`https://localhost:5001/providers/update/${providerDetails.id}`,{
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(providerDetails)
-            }).then((resp) => resp.json())
-            .then((data) => {
-                setProviderDetails(data)
-            })
-            .catch((err) => console.log(err))
+
+        fetch(`https://localhost:5001/providers/update/${providerDetails.id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify(providerDetails)
+        }).then((resp) => resp.json())
+        .then((data) =>{
+            setProviderDetails(data)
+        }).catch((err) => console.log(err))
         
         //window.location.href='/providers'
     }

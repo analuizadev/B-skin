@@ -78,6 +78,7 @@
     flex-wrap: wrap;
     justify-content: center;
     color: #0e4e96;
+    margin-bottom: 2em;
 }
 
 .card-header{
