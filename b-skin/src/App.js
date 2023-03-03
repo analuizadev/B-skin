@@ -1,4 +1,4 @@
-import React, {Fragment, useState, useEffect, useMemo} from 'react';
+import React, {Fragment, useState, useEffect} from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './components/others/Theme';
 import GlobalTheme from './components/others/Global';
@@ -16,7 +16,6 @@ import ShopPage from './components/pages/ShopPage';
 import Providers from './components/pages/Providers';
 import ProviderDetails from './components/pages/ProviderDetails';
 import Contact from './components/pages/Contact';
-import Order from './components/pages/Order';
 import Bag from './components/pages/Bag';
 import EditProvide from './components/pages/EditProvide';
 import ShirtDetails from './components/pages/ShirtDetails';
@@ -74,7 +73,6 @@ function App() {
               <Route path="/shirt" element={<Shirt />}></Route>
               <Route path="/shoppage" element={<ShopPage />}></Route>
               <Route path="/providers" element={<Providers />}></Route>
-              <Route path="/order" element={<Order />}></Route>
               <Route path="/contact" element={<Contact />}></Route>
               <Route path="/bag" element={<Bag />}></Route>
               <Route path="t-shirts/details/:id" element={<ShirtDetails />}></Route>

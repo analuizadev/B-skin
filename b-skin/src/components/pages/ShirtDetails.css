@@ -67,18 +67,15 @@
 .shirt-info footer .center button{
     padding: 10px 30px;
     border-radius: 20px;
-    background-color: #0e4e96;
-    color: white;
+    border: 1px solid;
     font-size: 13px;
     border-radius: 20px;
-    transition: .3s ease-out;
+    transition: .3s ease-in;
 }
 
 .shirt-info footer .center button:hover{
-    box-shadow: inset 200px 0 0 #0e4d9690;
-    border-radius: 20px;
-    background-color: transparent;
-    color: #0e4e96;
+    background: #0e4e96;
+    color: white;
 }
 
 @media (max-width:550px){

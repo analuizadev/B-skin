@@ -7,11 +7,8 @@ import styles from "./NavBar.css";
 
 import Container from './Container';
 import Search from '../services/Search';
-import Order from '../pages/Order';
 
 function NavBar(){
-
-    const [modalOpen, setModalOpen] = useState(false);
 
     const handleCLick = event => {
         
@@ -49,7 +46,7 @@ function NavBar(){
 
                                 <div class="flex_contact">
                                     <div class="bag-order">
-                                        <li onClick={() => {setModalOpen(true)}}><BsBasket3 /></li>
+                                        <li><Link to="/bag"><BsBasket3 /></Link></li>
                                     </div>
                                 </div> 
 
@@ -65,8 +62,6 @@ function NavBar(){
                     
                 </Container>
             </nav>
-
-            {modalOpen && <Order setOpenModal={setModalOpen} />}
 
         </>        
     )
