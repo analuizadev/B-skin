@@ -77,18 +77,19 @@ function Shirt(){
                 <header>
                     <h3 onClick={click}>Filters <BsFilter /></h3>
 
-                    <div class="search">
-                        <input
-                        onChange={handleInputChange} 
-                        type='search'
-                        placeholder="Digite um produto"/>
+                    <div class="aline">
+                        <div class="search">
+                            <input
+                            onChange={handleInputChange} 
+                            type='search'
+                            placeholder="Search"/>
+                        </div>
+                        <select>
+                            <option disabled> Sort By </option>
+                            <option value="high">High price</option>
+                            <option value="low">Low price</option>
+                        </select>
                     </div>
-
-                    <select>
-                        <option disabled> Sort By </option>
-                        <option value="high">High price</option>
-                        <option value="low">Low price</option>
-                    </select>
                 </header>
 
                 <article>

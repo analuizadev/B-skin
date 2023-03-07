@@ -15,6 +15,12 @@
     align-items: center;
 }
 
+.shirt-container .aline{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
 .shirt-container header select{
     padding: 10px 20px;
     background-color: transparent;
@@ -39,22 +45,19 @@
     outline: 0;
     width: 100%;
     line-height: 1.5;
-    font-size: 15px;
+    font-size: 13px;
     background-color: transparent;
-    color: white;
+    color: #0e4e96;
     text-indent: 5px;
 } 
 
 .shirt-container header .search{
     border-radius: 20px;
-    width: 40%;
+    width: 55%;
     padding: 9px;
-    background-color: #0e4d96 ;
+    border: 1px solid #0e4d9671;
+    background-color: transparent;
     position: relative;
-}
-
-.shirt-container header .search:hover{
-    background-color: #1357a594;
 }
 
 .shirt-container header .search input:hover{
@@ -62,7 +65,7 @@
 }
 
 .shirt-container .search input::placeholder{
-    color: white;
+    color: #0e4e96;
 }
 
 .shirt-container article{
@@ -229,6 +232,12 @@
     }
 }
 
+@media (max-width: 750px){
+    .shirt-container .aline{
+        width: 70%;
+    }
+}
+
 @media(max-width: 650px ){
     .shirt-container article section{
         grid-template-columns: repeat(1, minmax(0px, 1fr));
@@ -237,11 +246,17 @@
 }
 
 @media(max-width: 450px ){
+
+    .shirt-container header h3{
+        display: none;
+    }
+
+    .shirt-container .aline{
+        width: 100%;
+        justify-content: space-between;
+    }
+
     .shirt-container .filter{
         position: absolute;
-        z-index: 10;
-        background-color: rgba(255, 255, 255, 0.916);
-        width: 40%;
-        height: 15%;
     }
 }
