@@ -1,5 +1,5 @@
 import styles from './Shirt.css';
-import { BsFilter } from 'react-icons/bs';
+import { BsArrowReturnRight, BsFilter } from 'react-icons/bs';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import { useEffect, useState } from 'react';
 
@@ -14,7 +14,7 @@ function Shirt(){
     const endIndex = startIndex + shirtsPerPage;
     const currentShirts = shirts.slice(startIndex, endIndex)
 
-    useEffect(() =>{
+    /*useEffect(() =>{
         const fetchData = async () => {
             const result = await fetch(`https://localhost:5001/t-shirts/list`, {
                 method: 'POST',
@@ -34,7 +34,7 @@ function Shirt(){
             setShirts(result)
         }
         fetchData()
-    }, [])
+    }, [])*/
 
     const [active, setActive] = useState(false)
     const click = () => setActive(!active)
@@ -43,11 +43,46 @@ function Shirt(){
         window.location.href=`t-shirts/details/${id}`
     }
 
+    const [search, setData] = useState([])
+
+    const handleInputChange = (e) => {
+        e.preventDefault();
+
+        const {value} = e.target;
+
+        if(!value) return;
+
+        fetch(`https://localhost:5001/t-shirts/search/${value}?resultsLimit=8`, {
+            method: 'POST'
+        })
+        .then((resp) => resp.json())
+        .then((data) => setData(data))
+    }
+
+    const resultList = search.map((item) =>{
+        return(
+            <div onClick={() => shirtDetails(search.id)} class="grid-item" key={item.id}>
+                <img src={item.imageUrl}
+                alt={item.modelDescription} />
+                <h3>{item.modelName}</h3>
+                <p>{item.brand}</p>
+                <span>${item.price}</span>
+            </div>
+        )
+    })
+
     return(
         <div class="shirt-body">
             <div class="shirt-container">
                 <header>
                     <h3 onClick={click}>Filters <BsFilter /></h3>
+
+                    <input
+                    onChange={handleInputChange} 
+                    type='search'
+                    placeholder="Digite um produto"/>
+                    <button type="submit">go</button>
+
                     <select>
                         <option disabled> Sort By </option>
                         <option value="high">High price</option>
@@ -136,17 +171,11 @@ function Shirt(){
                     </aside>
                     <div class="pag-style">
                         <section class="grid">
-                            {currentShirts.map(shirt =>{
-                                return(
-                                    <div onClick={() => shirtDetails(shirt.id)} class="grid-item" key={shirt.id}>
-                                        <img src={shirt.imageUrl}
-                                        alt="Black Batman T-shirt" />
-                                        <h3>{shirt.modelName}</h3>
-                                        <p>{shirt.brand}</p>
-                                        <span>${shirt.price}</span>
-                                    </div>
-                                )
-                            })}
+                            {!search.length ? (
+                                <div>nada</div>
+                            ): (
+                                <>{resultList}</>
+                            )}
                         </section>
                         <div class="pag">
                             <div class="seta">
