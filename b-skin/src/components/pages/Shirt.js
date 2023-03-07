@@ -14,7 +14,7 @@ function Shirt(){
     const endIndex = startIndex + shirtsPerPage;
     const currentShirts = shirts.slice(startIndex, endIndex)
 
-    /*useEffect(() =>{
+    useEffect(() =>{
         const fetchData = async () => {
             const result = await fetch(`https://localhost:5001/t-shirts/list`, {
                 method: 'POST',
@@ -34,7 +34,7 @@ function Shirt(){
             setShirts(result)
         }
         fetchData()
-    }, [])*/
+    }, [])
 
     const [active, setActive] = useState(false)
     const click = () => setActive(!active)
@@ -77,11 +77,12 @@ function Shirt(){
                 <header>
                     <h3 onClick={click}>Filters <BsFilter /></h3>
 
-                    <input
-                    onChange={handleInputChange} 
-                    type='search'
-                    placeholder="Digite um produto"/>
-                    <button type="submit">go</button>
+                    <div class="search">
+                        <input
+                        onChange={handleInputChange} 
+                        type='search'
+                        placeholder="Digite um produto"/>
+                    </div>
 
                     <select>
                         <option disabled> Sort By </option>
@@ -172,7 +173,19 @@ function Shirt(){
                     <div class="pag-style">
                         <section class="grid">
                             {!search.length ? (
-                                <div>nada</div>
+                                <>
+                                    {currentShirts.map(shirt =>{
+                                        return(
+                                            <div onClick={() => shirtDetails(shirt.id)} class="grid-item" key={shirt.id}>
+                                                <img src={shirt.imageUrl}
+                                                alt="Black Batman T-shirt" />
+                                                <h3>{shirt.modelName}</h3>
+                                                <p>{shirt.brand}</p>
+                                                <span>${shirt.price}</span>
+                                            </div>
+                                        )
+                                    })}
+                                </>
                             ): (
                                 <>{resultList}</>
                             )}

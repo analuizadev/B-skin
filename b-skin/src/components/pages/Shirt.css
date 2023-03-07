@@ -33,6 +33,38 @@
     font-size: 14px;
 }
 
+.shirt-container header input{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 15px;
+    background-color: transparent;
+    color: white;
+    text-indent: 5px;
+} 
+
+.shirt-container header .search{
+    border-radius: 20px;
+    width: 40%;
+    padding: 9px;
+    background-color: #0e4d96 ;
+    position: relative;
+}
+
+.shirt-container header .search:hover{
+    background-color: #1357a594;
+}
+
+.shirt-container header .search input:hover{
+    background-color: transparent;
+}
+
+.shirt-container .search input::placeholder{
+    color: white;
+}
+
 .shirt-container article{
     display: flex;
 }
@@ -121,6 +153,7 @@
     grid-template-columns: repeat(3, minmax(0px, 1fr));
     gap: 5em 1em;
     justify-items: center;
+    margin-top: 3em;
 }
 
 .shirt-container section .grid-item{

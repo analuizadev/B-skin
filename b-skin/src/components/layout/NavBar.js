@@ -6,7 +6,6 @@ import { useState } from 'react';
 import styles from "./NavBar.css";
 
 import Container from './Container';
-import Search from '../services/Search';
 
 function NavBar(){
 
@@ -52,10 +51,6 @@ function NavBar(){
 
                             </div>
                                               
-                        </ul>
-
-                        <ul class="services">
-                            <Search class="search"/>
                         </ul>
 
                     </div>
