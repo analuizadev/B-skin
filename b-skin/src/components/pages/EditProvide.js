@@ -41,7 +41,7 @@ function EditProvide(){
             setProviderDetails(data)
         }).catch((err) => console.log(err))
         
-        //window.location.href='/providers'
+        window.location.href='/providers'
     }
 
     return(
