@@ -50,7 +50,10 @@ function Shirt(){
 
         const {value} = e.target;
 
-        if(!value) return;
+        if(!value){
+            setData([])
+            return;
+        }
 
         fetch(`https://localhost:5001/t-shirts/search/${value}?resultsLimit=8`, {
             method: 'POST'
