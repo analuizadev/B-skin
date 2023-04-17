@@ -1,4 +1,4 @@
-<h1 >B-SKIN</h1>
+<h1>B-SKIN <img src="https://media.discordapp.net/attachments/1015469538738970636/1097658410956230656/bSkin.png?width=35&height=30"/></h1>
 
 <div>
   <p>B-SKIN is an e-commerce made for sellers and customers. A simple website selling t-shirts, which has a home page with a carrousel featuring some t-shirts. A page with a grid of shirts and a filter to facilitate the search. A provider table, where you can change their information and track who is active or inactive. A contact page, with a get help with the main questions and email/telephone number for contact. A page with the order's informations. And, to finish, this site is responsive and has dark and light modes. I hope you enjoy this project.</p>
